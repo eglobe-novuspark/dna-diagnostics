@@ -1,1 +1,40 @@
-<div class="search-bar"> <input type="text" placeholder="Search tests..." /> </div>
+<div class="search-wrapper">
+
+<div class="search-bar">
+  <input
+    type="text"
+    placeholder="Search tests..."
+    [(ngModel)]="searchText"
+    (input)="onSearch()"
+  />
+</div>
+
+  @if (results.length > 0) {
+
+    <div class="search-dropdown">
+
+      @for (item of results; track item.id) {
+
+        <div class="search-item">
+
+          <img [src]="item.image" alt="" />
+
+          <div class="info">
+            <h4>{{ item.title }}</h4>
+
+            <div class="price">
+              ₹{{ item.price }}
+            </div>
+
+            <span>{{ item.category }}</span>
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  }
+
+</div>

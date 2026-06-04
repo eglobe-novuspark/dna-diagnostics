@@ -19,11 +19,45 @@
 }
 
 .nav-link {
+  position: relative;
   color: white;
   text-decoration: none;
   font-weight: 500;
   font-size: 15px;
   white-space: nowrap;
+  transition: color 0.3s ease;
+  padding-bottom: 4px;
+}
+
+/* Smooth hover color */
+.nav-link:hover {
+  color: #f59e0b;
+}
+
+/* Underline Animation */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #f59e0b;
+  transition: width 0.3s ease;
+}
+
+/* Hover underline */
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active route */
+.nav-link.active {
+  color: #f59e0b;
+}
+
+.nav-link.active::after {
+  width: 100%;
 }
 
 .cart {

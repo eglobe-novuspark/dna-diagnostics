@@ -1,0 +1,39 @@
+<div class="mobile-header">
+
+  <div class="container">
+
+    <div class="mobile-top">
+
+      <button
+        class="menu-btn"
+        (click)="openSidebar()"
+      >
+        ☰
+      </button>
+
+      <div class="mobile-logo">
+        <img
+          src="https://dnalabsindia.com/storage/2024/06/dnalogo.webp"
+          alt="logo"
+        />
+      </div>
+
+      <button class="cart-btn">
+        🛒
+      </button>
+
+    </div>
+
+    <div class="mobile-search">
+      <app-search-bar />
+    </div>
+
+  </div>
+
+</div>
+
+<app-mobile-sidebar
+  ngSkipHydration
+  [isOpen]="isSidebarOpen()"
+  (closeSidebar)="closeSidebar()"
+></app-mobile-sidebar>

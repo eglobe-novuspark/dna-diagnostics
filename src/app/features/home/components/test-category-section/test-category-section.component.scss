@@ -1,0 +1,154 @@
+.test-category-section {
+  padding: 10px;
+}
+
+.title-bar {
+  padding: 18px 0;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+
+
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.test-card {
+  background: #fff;
+  border-radius: 1px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  height: 100%;
+
+//   &:hover {
+//     transform: translateY(-10px);
+//     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+//   }
+}
+
+.test-image {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.08);
+  }
+}
+
+.discount-badge {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #22c55e;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.test-content {
+  padding: 10px;
+}
+
+.test-category {
+  margin: 0 0 10px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.test-title {
+  margin: 0 0 10px;
+  font-size: 15px;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 600;
+  color: #1f2937;
+  min-height: 62px;   /* Consistent height */
+}
+
+.price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.old-price {
+  color: #9ca3af;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.new-price {
+  color: #ea580c;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.book-btn {
+  width: 100%;
+  height: 38px;
+  background: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #16a34a;
+    transform: translateY(-1px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .test-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet & Mobile - Show 2 Cards */
+@media (max-width: 992px) {
+  .test-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .test-image {
+    height: 240px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 576px) {
+  .test-grid {
+    grid-template-columns: repeat(2, 1fr);   /* 2 Cards in Mobile */
+    gap: 16px;
+  }
+  .test-image {
+    height: 220px;
+  }
+  .section-title {
+    font-size: 24px;
+  }
+}

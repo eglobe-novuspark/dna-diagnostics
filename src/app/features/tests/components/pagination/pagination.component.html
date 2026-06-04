@@ -1,0 +1,34 @@
+<div class="pagination-container" *ngIf="totalPages > 0">
+
+  <!-- Results info (optional) -->
+  <div class="pagination-info" *ngIf="showInfo">
+    Showing {{ startIndex }}–{{ endIndex }} of {{ totalItems }} results
+  </div>
+
+  <!-- Items per page dropdown -->
+  <div class="page-size-selector">
+    <label for="pageSize">Show</label>
+    <select id="pageSize" [value]="itemsPerPage" (change)="onItemsPerPageChange($event)">
+      <option *ngFor="let size of pageSizeOptions" [value]="size">{{ size }}</option>
+    </select>
+    <span>per page</span>
+  </div>
+
+  <!-- Page navigation -->
+  <div class="pagination-navigation">
+    <button class="page-btn prev-btn" [disabled]="currentPage === 1" (click)="goToPage(currentPage - 1)">
+      ‹ Previous
+    </button>
+
+    <ng-container *ngFor="let page of pages">
+      <button *ngIf="page !== '...'" class="page-btn" [class.active]="page === currentPage" (click)="goToPage(page)">
+        {{ page }}
+      </button>
+      <span *ngIf="page === '...'" class="ellipsis">…</span>
+    </ng-container>
+
+    <button class="page-btn next-btn" [disabled]="currentPage === totalPages" (click)="goToPage(currentPage + 1)">
+      Next ›
+    </button>
+  </div>
+</div>

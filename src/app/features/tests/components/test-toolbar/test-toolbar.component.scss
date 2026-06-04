@@ -1,0 +1,42 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 25px;
+  padding: 10px 0;
+}
+
+.left, .center, .right {
+  display: flex;
+  align-items: center;
+}
+
+.sort-select {
+  padding: 10px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  font-size: 15px;
+}
+
+.results-info {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.right ::ng-deep .ngx-pagination {
+  padding: 0;
+}
+
+.right ::ng-deep .ngx-pagination li {
+  margin: 0 3px;
+}
+
+.right ::ng-deep .ngx-pagination .current {
+  background: #22c55e !important;
+  border-color: #22c55e;
+}

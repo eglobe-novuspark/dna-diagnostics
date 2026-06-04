@@ -1,0 +1,29 @@
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { TESTS_MOCK } from '../../data/tests.mock';
+
+@Component({
+  selector: 'app-test-category-section',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './test-category-section.component.html',
+  styleUrl: './test-category-section.component.scss'
+})
+export class TestCategorySectionComponent {
+testCategoryItems = TESTS_MOCK.slice(0, 4).map((test, index) => ({
+    ...test,
+    displayCategory: this.getDisplayCategory(test.category),
+    discount: [35, 44, 50, 50][index] || 40,
+    oldPrice: test.oldPrice || Math.floor(test.price * 1.45)
+  }));
+
+  private getDisplayCategory(cat: string): string {
+    switch (cat.toLowerCase()) {
+      case 'dna-test': return 'DNA TEST';
+      case 'health-test': return 'DNA AGE TEST';
+      case 'nipt-test': return 'NIPT TEST';
+      case 'wellness-test': return 'ANCESTRY';
+      default: return 'DNA TEST';
+    }
+  }
+}

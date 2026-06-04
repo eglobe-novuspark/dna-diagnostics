@@ -1,0 +1,84 @@
+<!-- test-filter-sidebar.component.html -->
+<div class="sidebar">
+  <!-- Search Box -->
+  <div class="search-box">
+    <input type="text" placeholder="Search tests..." class="search-input" />
+  </div>
+
+  <!-- Recent Posts Section -->
+  <div class="section">
+    <h3 class="section-title">RECENT POSTS</h3>
+    <ul class="recent-posts">
+      <li>Hantavirus: What You Need to Know</li>
+      <li>Liquid Biopsy Cancer Test in India: Cost, Accuracy & Early Detection Guide</li>
+      <li>World DNA Day 2026: Unlocking Your Genetic Code with DNA Labs India</li>
+      <li>World Liver Day 2026: Why India Needs to Focus on 'Solid Habits' Now</li>
+      <li>World Hemophilia Day 2026: Why Diagnosis is the Critical First Step to India's Health Future</li>
+    </ul>
+  </div>
+
+  <!-- Price Filter Section (Custom Dual Slider) -->
+  <div class="price-filter">
+    <h3 class="section-title">FILTER BY PRICE</h3>
+
+    <div class="slider-wrapper">
+      <!-- Background Track -->
+      <div class="slider-track"></div>
+
+      <!-- Highlighted Range Between Thumbs -->
+      <div
+        class="slider-range"
+        [style.left.%]="(minPrice / maxLimit) * 100"
+        [style.right.%]="100 - (maxPrice / maxLimit) * 100"
+      ></div>
+
+      <!-- Min Price Slider Thumb -->
+      <input
+        type="range"
+        [min]="minLimit"
+        [max]="maxLimit"
+        [step]="step"
+        [(ngModel)]="minPrice"
+        (input)="onMinChange()"
+        class="min-slider"
+      />
+
+      <!-- Max Price Slider Thumb -->
+      <input
+        type="range"
+        [min]="minLimit"
+        [max]="maxLimit"
+        [step]="step"
+        [(ngModel)]="maxPrice"
+        (input)="onMaxChange()"
+        class="max-slider"
+      />
+    </div>
+
+    <div class="price-bottom">
+      <button class="filter-btn" (click)="applyFilter()">Filter</button>
+      <div class="price-values">
+        Price: {{ formatPrice(minPrice) }} — {{ formatPrice(maxPrice) }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Rated Products Section -->
+  <div class="section">
+    <h3 class="section-title">TOP RATED PRODUCTS</h3>
+    <div class="top-product">
+      <div class="product-info">
+        <p class="product-name">OncoPro Prostate Cancer Screen Test</p>
+        <div class="product-price">
+          <span class="old">₹31,200</span>
+          <span class="new">₹28,080</span>
+        </div>
+      </div>
+      <img
+        src="assets/images/oncopro.jpg"
+        alt="OncoPro"
+        class="product-img"
+      />
+    </div>
+  </div>
+</div>

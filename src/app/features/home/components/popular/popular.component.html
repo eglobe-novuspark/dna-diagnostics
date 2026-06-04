@@ -1,0 +1,34 @@
+<div class="container">
+  <section class="test-category-section">
+<div class="section-header">
+
+  <h2 class="section-title">
+    Genetic NIPT DNA Test Cost
+  </h2>
+
+</div>
+
+    <div class="test-grid">
+      @for (test of testCategoryItems; track test.id) {
+        <div class="test-card">
+          <div class="test-image">
+            <img [src]="test.image" [alt]="test.title" />
+            <div class="discount-badge">-{{ test.discount }}%</div>
+          </div>
+
+          <div class="test-content">
+            <p class="test-category">{{ test.displayCategory }}</p>
+            <h3 class="test-title">{{ test.title }}</h3>
+
+            <div class="price-wrapper">
+              <span class="old-price">₹{{ test.oldPrice | number }}</span>
+              <span class="new-price">₹{{ test.price | number }}</span>
+            </div>
+
+            <button class="primary-btn">Book Now</button>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+</div>

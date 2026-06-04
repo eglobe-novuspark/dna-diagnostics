@@ -1,0 +1,33 @@
+<div class="container">
+  <!-- Toolbar (no pagination inside) -->
+  <!-- <app-test-toolbar 
+    [totalResults]="totalResults"
+    [currentPage]="currentPage"
+    [itemsPerPage]="itemsPerPage"
+    (sortChange)="onSortChange($event)">
+  </app-test-toolbar> -->
+
+  <div class="content-wrapper">
+    <app-test-filter-sidebar
+      (priceChanged)="onPriceFilter($event)">
+    </app-test-filter-sidebar>
+    <div class="main-content">
+      <app-pagination
+        [totalItems]="totalResults"
+        [itemsPerPage]="itemsPerPage"
+        [currentPage]="currentPage"
+        [showInfo]="false"                
+        (pageChange)="onPageChange($event)"
+        (itemsPerPageChange)="onItemsPerPageChange($event)">
+      </app-pagination>
+      <!-- Grid receives only the sliced page -->
+      <app-test-grid
+        [tests]="pagedTests"
+        (bookNow)="bookTest($event)">
+      </app-test-grid>
+
+      <!-- Reusable pagination component – can be placed top, bottom, or both -->
+      
+    </div>
+  </div>
+</div>

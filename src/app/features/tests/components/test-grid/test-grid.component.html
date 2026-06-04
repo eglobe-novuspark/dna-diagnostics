@@ -1,0 +1,5 @@
+<div class="test-grid">
+  @for (test of tests; track test.id) {
+    <app-test-card [test]="test" (bookNow)="onBookNow($event)" />
+  }
+</div>

@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@use './styles/layouts/container';
+@use './styles/base/typography';
+@use './styles/components/buttons';
+/* Import Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  font-family: 'Poppins', system-ui, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}

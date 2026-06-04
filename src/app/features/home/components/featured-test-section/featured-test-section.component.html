@@ -1,0 +1,23 @@
+<section class="featured-test-section">
+  <div class="container">
+    <div class="test-grid">
+
+      @for (test of featuredTests; track test.id) {
+        <div class="test-card">
+          <div class="test-image">
+            <img [src]="test.image" [alt]="test.title" />
+            <div class="overlay"></div>
+            
+            <div class="test-info">
+              <h3 class="test-name">{{ test.title }}</h3>
+              <p class="test-price">Cost {{ test.price | number }} Rs</p>
+            </div>
+          </div>
+
+          <button class="book-btn">Book Now</button>
+        </div>
+      }
+
+    </div>
+  </div>
+</section>

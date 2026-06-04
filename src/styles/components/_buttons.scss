@@ -1,0 +1,41 @@
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 160px;
+  height: 50px;
+
+  padding: 0 24px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #22c55e;
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #16a34a;
+  }
+}
+
+/* Small Button */
+.primary-btn-sm {
+  height: 40px;
+  min-width: 120px;
+  font-size: 14px;
+}
+
+/* Large Button */
+.primary-btn-lg {
+  height: 58px;
+  min-width: 220px;
+  font-size: 18px;
+}

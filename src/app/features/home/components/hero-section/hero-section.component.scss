@@ -1,0 +1,212 @@
+.hero-section {
+  background: #edf0f5;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 60px;
+  min-height: 502px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LEFT SIDE */
+
+.hero-content {
+  flex: 0 0 55%;
+  max-width: 55%;
+  padding-top: 20px;
+}
+
+.hero-title {
+  margin: 0;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -3px;
+
+  color: #000;
+}
+
+.hero-description {
+  margin-top: 42px;
+  margin-bottom: 50px;
+
+  max-width: 760px;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+
+  color: #4a4068;
+}
+
+.hero-btn {
+  width: 220px;
+  height: 92px;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: #39b54a;
+  color: #fff;
+
+  cursor: pointer;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+
+  transition: .3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.hero-note {
+  margin-top: 38px;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+
+  color: #111;
+}
+
+/* RIGHT SIDE */
+
+.hero-image {
+  flex: 0 0 95%;
+  max-width: 50%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  align-self: flex-end;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 760px;
+  height: 80%;
+  display: block;
+}
+
+/* ==========================
+   LARGE LAPTOP
+========================== */
+
+@media (max-width: 1600px) {
+
+  .hero-title {
+    font-size: 67px;
+  }
+
+  .hero-container {
+    min-height: 620px;
+  }
+}
+
+/* ==========================
+   LAPTOP
+========================== */
+
+@media (max-width: 1400px) {
+
+  .hero-title {
+    font-size: 62px;
+  }
+
+  .hero-description {
+    font-size: 21px;
+  }
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 1024px) {
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+
+    min-height: auto;
+    padding: 70px 25px;
+  }
+
+  .hero-content,
+  .hero-image {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .hero-title {
+    font-size: 58px;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image {
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .hero-image img {
+    max-width: 500px;
+  }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+  .hero-container {
+    padding: 0px 20px;
+  }
+
+  .hero-title {
+    font-size: 30px;
+    letter-spacing: -1px;
+    line-height: 1.15;
+  }
+
+  .hero-description {
+    margin-top: 25px;
+    margin-bottom: 30px;
+
+    font-size: 18px;
+  }
+
+  .hero-btn {
+    width: 180px;
+    height: 65px;
+    font-size: 18px;
+  }
+
+  .hero-note {
+    margin-top: 25px;
+    font-size: 15px;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+}

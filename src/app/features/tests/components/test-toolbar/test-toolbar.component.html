@@ -1,0 +1,16 @@
+<div class="toolbar">
+  <div class="left">
+    <select class="sort-select" (change)="onSortChange($event)">
+      <option value="popularity">Sort by popularity</option>
+      <option value="price-low">Price: Low to High</option>
+      <option value="price-high">Price: High to Low</option>
+    </select>
+  </div>
+
+  <div class="center">
+    <div class="results-info">
+      {{ getShowingText() }}
+    </div>
+  </div>
+  <!-- No pagination controls here anymore -->
+</div>

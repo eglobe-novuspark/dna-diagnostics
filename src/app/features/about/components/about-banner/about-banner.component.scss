@@ -1,0 +1,148 @@
+// Poppins font import
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.about-banner {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('https://dnalabsindia.com/storage/2024/06/bgr1.webp');
+  background-size: cover;           // This makes the image cover the entire area
+  background-position: center;      // Centers the image
+  background-repeat: no-repeat;     // Prevents repeating
+  padding: 80px 0 100px;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);   // Dark overlay for better text readability
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Breadcrumb styles
+.breadcrumb {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 15px;
+  font-weight: 500;
+
+  a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+
+  .separator {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 8px;
+  }
+
+  .current {
+    color: white;
+    font-weight: 600;
+  }
+}
+
+// Section header styles
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.section-description {
+  max-width: 850px;
+  margin: 18px auto 0;
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+}
+
+// Tablet
+@media (max-width: 992px) {
+  .about-banner {
+    padding: 60px 0 80px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+}
+
+// Mobile
+@media (max-width: 768px) {
+  .about-banner {
+    padding: 50px 0 60px;
+    background-position: center 30%;  // Adjusts image position on mobile if needed
+  }
+
+  .breadcrumb {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .section-description {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 15px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+}
+
+// Small mobile
+@media (max-width: 480px) {
+  .about-banner {
+    padding: 40px 0 50px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-description {
+    font-size: 14px;
+  }
+}

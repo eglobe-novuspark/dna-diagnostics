@@ -1,0 +1,104 @@
+.featured-test-section {
+  padding: 30px 10px 40px;
+  background: #ffffff;
+}
+
+
+
+.test-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.test-card {
+  flex: 0 0 calc(33.33% - 13.33px);
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  min-height: 100%;
+
+  &:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  &:hover img {
+    transform: scale(1.08);
+  }
+}
+
+.test-image {
+  position: relative;
+  height: 200px;           /* Matches banner proportion */
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.08), rgba(0,0,0,0.68));
+  }
+
+  .test-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 18px 18px;
+    color: white;
+    z-index: 2;
+  }
+
+  .test-name {
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    line-height: 1.2;
+  }
+
+  .test-price {
+    font-size: 16.5px;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.book-btn {
+  width: 100%;
+  height: 52px;
+  background: #39b54a;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0 0 12px 12px;
+
+  &:hover {
+    background: #2e9b3d;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .test-card {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .test-card {
+    flex: 0 0 100%;
+  }
+  .test-image {
+    height: 240px;
+  }
+}

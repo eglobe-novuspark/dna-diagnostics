@@ -1,0 +1,15 @@
+.search-bar {
+  flex: 1;
+  max-width: 380px;
+}
+
+.search-bar input {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #ddd;
+  background: #f8f9fa;
+  border-radius: 25px;
+  padding: 0 16px;
+  font-size: 15px;
+  outline: none;
+}

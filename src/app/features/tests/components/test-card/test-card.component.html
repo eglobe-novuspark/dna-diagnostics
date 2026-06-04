@@ -1,0 +1,35 @@
+<div class="test-card">
+  <!-- Discount Badge -->
+  <div class="discount-badge" *ngIf="test.discount">
+    -{{ test.discount }}%
+  </div>
+
+  <!-- Image -->
+  <div class="card-image">
+    <img [src]="test.image || 'assets/images/placeholder.jpg'" [alt]="test.title">
+  </div>    
+
+  <!-- NA Labs / Lab Badge -->
+  <div class="na-labs-banner" *ngIf="test.badge">
+    {{ test.badge }}
+  </div>
+
+  <!-- Card Content -->
+  <div class="card-content">
+    <p class="specialty">{{ test.displayCategory || test.category || test.doctor }}</p>
+    <h3 class="test-name">{{ test.title }}</h3>
+
+    <div class="price-row">
+      <span class="original-price" *ngIf="test.oldPrice">
+        ₹{{ test.oldPrice | number }}
+      </span>
+      <span class="current-price">₹{{ test.price | number }}</span>
+    </div>
+
+    <!-- You can add report time later if available -->
+  </div>
+
+  <button class="book-button" (click)="onBookNow()">
+    Book Now
+  </button>
+</div>

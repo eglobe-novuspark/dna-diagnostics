@@ -1,0 +1,42 @@
+@if (isOpen()) {
+
+  <div
+    class="sidebar-overlay"
+    (click)="closeSidebar.emit()"
+  ></div>
+
+}
+
+<div
+  class="mobile-sidebar"
+  [class.open]="isOpen()"
+>
+
+  <div class="sidebar-header">
+
+    <h3>Menu</h3>
+
+    <button
+      class="close-btn"
+      (click)="closeSidebar.emit()"
+    >
+      ✕
+    </button>
+
+  </div>
+
+  <ul class="sidebar-links">
+
+    <li>Home</li>
+
+    <li>About</li>
+
+    <li>Test List</li>
+
+    <li>Blog</li>
+
+    <li>Contact</li>
+
+  </ul>
+
+</div>

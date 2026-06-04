@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/dna-diagnostics/server/server.mjs",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "dist/dna-diagnostics/browser/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/dna-diagnostics/server/server.mjs"
+    }
+  ]
+}

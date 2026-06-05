@@ -1,277 +1,603 @@
-// import { Test } from '../models/test.interface';
-
-// export const TESTS_MOCK: Test[] = [
-//   {
-//     id: 1,
-//     title: "Paternity DNA Test",
-//     category: "DNA TEST",
-//     price: 13000,
-//     oldPrice: 20000,
-//     discount: 35,
-//     image: "https://dnalabsindia.com/storage/2024/06/srg-dna-441x441.webp",
-//     doctor: "IVF CLINIC"
-//   },
-//   {
-//     id: 2,
-//     title: "Pregnancy Non-Invasive Prenatal NIPT Test",
-//     category: "NIPT TEST",
-//     price: 10000,
-//     oldPrice: 18000,
-//     discount: 44,
-//     image: "https://dnalabsindia.com/storage/2024/06/nipt-test-report-cost-441x441.webp",
-//     doctor: "DIABETOLOGIST, GYNECOLOGIST"
-//   },
-//   {
-//     id: 3,
-//     title: "Rabies Antibody Test for humans",
-//     category: "DNA TEST",
-//     price: 3500,
-//     oldPrice: 6000,
-//     discount: 49,
-//     image: "https://dnalabsindia.com/storage/2025/09/wXFdx4DNRjSFy91-s0vBs-768x768.webp",
-//     doctor: "GENERAL PHYSICIAN"
-//   },
-//   {
-//     id: 4,
-//     title: "Home DNA Test Kit - Swab Self Collection",
-//     category: "DNA TEST",
-//     price: 1000,
-//     oldPrice: 2000,
-//     discount: 50,
-//     image: "https://dnalabsindia.com/storage/2024/06/genetic-test-id-6879-768x768.webp",
-//     // badge: "NA Labs India"
-//   },
-//    {
-//     id: 5,
-//     title: "Birds DNA Test Cost",
-//     category: "DNA TEST",
-//     price: 1000,
-//     oldPrice: 1500,
-//     discount: 33,
-//     image: "https://dnalabsindia.com/storage/2024/06/genetic-test-id-7197-768x768.webp",
-//     doctor: "ORNITHOLOGIST"
-//   },
-//   {
-//     id: 6,
-//     title: "Food Intolerance Allergy Test Cost",
-//     category: "ALLERGY TEST",
-//     price: 6000,
-//     oldPrice: 8500,
-//     discount: 29,
-//     image: "https://dnalabsindia.com/storage/2024/06/food-allergy-intolerance-test-report-cost-768x768.webp",
-//     doctor: "PHYSICIAN, CHEST PHYSICIAN, DERMATOLOGIST, GASTROENTEROLOGIST"
-//   },
-//   {
-//     id: 7,
-//     title: "Gut Microbiome Test Cost",
-//     category: "MICROBIOME TEST",
-//     price: 6900,
-//     oldPrice: 20000,
-//     discount: 66,
-//     image: "https://dnalabsindia.com/storage/2024/06/db68ef13-e8db-4d4c-9c94-2310208d2209-768x512.png",
-//     doctor: "GASTROENTEROLOGIST"
-//   },
-//   {
-//     id: 8,
-//     title: "Rabies Detection RNA Qualitative PCR Test Humans Cost",
-//     category: "PCR TEST",
-//     price: 6000,
-//     oldPrice: 7500,
-//     discount: 20,
-//     image: "https://dnalabsindia.com/storage/2024/06/Rabies-Detection-RNA-Qualitative-PCR-test-for-humans-varies-768x768.webp",
-//     doctor: "PHYSICIAN"
-//   },
-//   {
-//     id: 9,
-//     title: "DNA Genetic Methylation Test Cost",
-//     category: "DNA AGE TEST",
-//     price: 15000,
-//     oldPrice: 30000,
-//     discount: 50,
-//     image: "https://dnalabsindia.com/storage/2024/06/DNA_Genetic_Methylation_Test-768x768.webp",
-//     doctor: "GENETICIST"
-//   },
-//   {
-//     id: 10,
-//     title: "Family Tree Ancestry DNA Test",
-//     category: "ANCESTRY",
-//     price: 15000,
-//     oldPrice: 30000,
-//     discount: 50,
-//     image: "https://dnalabsindia.com/storage/2024/06/ancestry-dna-test-300x300.png",
-//     doctor: "ANCESTRY SPECIALIST"
-//   },
-//   {
-//     id: 11,
-//     title: "HIV 4th Generation Blood Rapid Test Kit Price",
-//     category: "HIV TEST",
-//     price: 400,
-//     oldPrice: 900,
-//     discount: 56,
-//     image: "https://dnalabsindia.com/storage/2024/07/hivhome-test-768x768.webp",
-//     doctor: "GENERAL PHYSICIAN"
-//   },
-//   {
-//     id: 12,
-//     title: "Food Intolerance Allergy Complete Test Panel Cost",
-//     category: "ALLERGY TEST",
-//     price: 8000,
-//     oldPrice: 10000,
-//     discount: 20,
-//     image: "",
-//     doctor: "PHYSICIAN, CHEST PHYSICIAN, DERMATOLOGIST, GASTROENTEROLOGIST"
-//   },
-
-
-//   {
-//     id: 13,
-//     title: "Sibling DNA Test",
-//     category: "DNA TEST",
-//     price: 12000,
-//     oldPrice: 18000,
-//     discount: 33,
-//     image: "",
-//     doctor: "GENETICIST"
-//   },
-//   {
-//     id: 14,
-//     title: "Maternity DNA Test",
-//     category: "DNA TEST",
-//     price: 13000,
-//     oldPrice: 20000,
-//     discount: 35,
-//     image: "",
-//     doctor: "GYNECOLOGIST"
-//   },
-//   {
-//     id: 15,
-//     title: "Twin Zygosity DNA Test",
-//     category: "DNA TEST",
-//     price: 14000,
-//     oldPrice: 22000,
-//     discount: 36,
-//     image: "",
-//     doctor: "GENETICIST"
-//   },
-//   {
-//     id: 16,
-//     title: "Y Chromosome DNA Test",
-//     category: "DNA TEST",
-//     price: 9500,
-//     oldPrice: 15000,
-//     discount: 37,
-//     image: "",
-//     doctor: "GENETICIST"
-//   },
-//   {
-//     id: 17,
-//     title: "Mitochondrial DNA Test",
-//     category: "DNA TEST",
-//     price: 10500,
-//     oldPrice: 17000,
-//     discount: 38,
-//     image: "",
-//     doctor: "GENETICIST"
-//   },
-//   {
-//     id: 18,
-//     title: "Whole Exome Sequencing Test",
-//     category: "GENETIC TEST",
-//     price: 35000,
-//     oldPrice: 50000,
-//     discount: 30,
-//     image: "",
-//     doctor: "GENETICIST"
-//   },
-//   {
-//     id: 19,
-//     title: "Cancer Genetic Screening Test",
-//     category: "GENETIC TEST",
-//     price: 18000,
-//     oldPrice: 25000,
-//     discount: 28,
-//     image: "",
-//     doctor: "ONCOLOGIST"
-//   },
-//   {
-//     id: 20,
-//     title: "BRCA Gene Mutation Test",
-//     category: "GENETIC TEST",
-//     price: 16000,
-//     oldPrice: 24000,
-//     discount: 33,
-//     image: "",
-//     doctor: "ONCOLOGIST"
-//   },
-//   {
-//     id: 21,
-//     title: "Prenatal Genetic Screening",
-//     category: "GENETIC TEST",
-//     price: 14000,
-//     oldPrice: 22000,
-//     discount: 36,
-//     image: "",
-//     doctor: "GYNECOLOGIST"
-//   },
-//   {
-//     id: 22,
-//     title: "Carrier Screening Test",
-//     category: "GENETIC TEST",
-//     price: 11000,
-//     oldPrice: 18000,
-//     discount: 39,
-//     image: "",
-//     doctor: "GENETIC COUNSELOR"
-//   },
-//   {
-//     id: 23,
-//     title: "Autism Risk Genetic Test",
-//     category: "GENETIC TEST",
-//     price: 17000,
-//     oldPrice: 26000,
-//     discount: 35,
-//     image: "",
-//     doctor: "NEUROLOGIST"
-//   },
-//   {
-//     id: 24,
-//     title: "Heart Disease Genetic Test",
-//     category: "GENETIC TEST",
-//     price: 12500,
-//     oldPrice: 19000,
-//     discount: 34,
-//     image: "",
-//     doctor: "CARDIOLOGIST"
-//   }
-// ];
-
-// export const TOTAL_RESULTS = 6457;
-
 
 import { Test } from '../models/test.interface';
 
-export const TESTS_MOCK: Test[] = Array.from(
-  { length: 1000 },
-  (_, index) => ({
-    id: index + 1,
-    title: `DNA Test ${index + 1}`,
-    category: [
-      'DNA TEST',
-      'GENETIC TEST',
-      'PCR TEST',
-      'ALLERGY TEST'
-    ][index % 4],
-    price: 1000 + (index * 25),
-    oldPrice: 2000 + (index * 50),
-    discount: 10 + (index % 70),
-    image: `https://picsum.photos/400/400?random=${index}`,
-    doctor: [
-      'GENERAL PHYSICIAN',
-      'GENETICIST',
-      'CARDIOLOGIST',
-      'GASTROENTEROLOGIST'
-    ][index % 4]
-  })
+/* =========================
+   REAL DATA
+========================= */
+
+const REAL_TESTS: Test[] = [
+
+  {
+    id: 1,
+
+    title: 'Paternity DNA Test',
+
+    slug: 'paternity-dna-test',
+
+    category: 'DNA TEST',
+
+    price: 13000,
+
+    oldPrice: 20000,
+
+    discount: 35,
+
+    image:
+      'https://dnalabsindia.com/storage/2024/06/srg-dna-441x441.webp',
+
+    images: [
+      'https://dnalabsindia.com/storage/2024/06/srg-dna-441x441.webp',
+      'https://dnalabsindia.com/storage/2024/06/srg-dna-441x441.webp',
+      'https://dnalabsindia.com/storage/2024/06/srg-dna-441x441.webp'
+    ],
+
+    doctor: 'IVF CLINIC',
+
+    reportsTime: '24 Hours',
+
+    descriptionContent: [
+
+      {
+        title:
+          'Professional Paternity DNA Test in India: ₹13,000 | Expert Clinic or Home Collection'
+      },
+
+      {
+        heading:
+          'Paternity DNA Test (पितृत्व डीएनए टेस्ट) – 100% Professional Sample Collection',
+
+        content:
+          'We provide professional DNA sample collection with highly accurate forensic laboratory analysis.'
+      },
+
+      {
+        heading:
+          'Medical Excellence. Absolute Certainty.',
+
+        bullets: [
+
+          'Service Fee: ₹13,000 (professional collection included)',
+
+          'Accuracy: 99.9999% (28-Marker Forensic Standard)',
+
+          'Collection: Blood or Professional Buccal Swab',
+
+          '300+ Medical Centres and Mobile Collection Available'
+
+        ]
+      },
+
+      {
+        heading:
+          'Why We Use Professional Blood and Buccal Sampling',
+
+        content:
+          'Your DNA is identical in every cell of your body. Professional medical collection eliminates contamination and improves forensic accuracy.'
+      },
+
+      {
+        heading:
+          'Questions About Our Professional Service',
+
+        bullets: [
+
+          'How technician verification works',
+
+          'Can blood collection be selected',
+
+          'Privacy maintained during home visit',
+
+          'ISO certified laboratory process'
+
+        ]
+      }
+
+    ],
+
+    description:
+      'A DNA Paternity Test examines aggregate genetic markers that are inherited from the parents to their descendants to ascertain that a given man is the actual biological father of a test child.',
+
+    descriptionSections: [
+
+      {
+        heading: '28 Genetic Markers',
+        content:
+          'They compare certain locations on the DNA of a child with those of the putative father.'
+      },
+
+      {
+        heading: 'Exclusion vs. Inclusion',
+        content:
+          'If markers differ, the man is excluded as biological father.'
+      },
+
+      {
+        heading: 'Matching Markers and Probability',
+        content:
+          'If all markers match, probability becomes 99.9999%.'
+      }
+
+    ],
+
+    serviceDetails: [
+
+      {
+        service: 'Clinical Collection',
+        validity: 'Personal Use',
+        price: '₹13,000'
+      },
+
+      {
+        service: 'Home Collection',
+        validity: 'Personal Use',
+        price: '₹15,000'
+      },
+
+      {
+        service: 'Legal DNA Test',
+        validity: 'Court Valid',
+        price: '₹26,000'
+      }
+
+    ]
+  },
+
+  {
+    id: 2,
+
+    title: 'Pregnancy Non-Invasive Prenatal NIPT Test',
+
+    slug: 'pregnancy-nipt-test',
+
+    category: 'NIPT TEST',
+
+    price: 10000,
+
+    oldPrice: 18000,
+
+    discount: 44,
+
+    image:
+      'https://dnalabsindia.com/storage/2024/06/nipt-test-report-cost-441x441.webp',
+
+    images: [
+      'https://dnalabsindia.com/storage/2024/06/nipt-test-report-cost-441x441.webp'
+    ],
+
+    doctor: 'GYNECOLOGIST',
+
+    reportsTime: '5 Days',
+
+    descriptionContent: [
+
+      {
+        title:
+          'Advanced NIPT Pregnancy Test in India'
+      },
+
+      {
+        heading:
+          'What is NIPT Test?',
+
+        content:
+          'NIPT (Non-Invasive Prenatal Testing) is an advanced prenatal screening test that detects chromosomal abnormalities using a blood sample from the mother.'
+      },
+
+      {
+        heading:
+          'Key Benefits',
+
+        bullets: [
+
+          'Safe for Mother and Baby',
+
+          'No Risk to Pregnancy',
+
+          'Early Detection of Genetic Disorders',
+
+          'Highly Accurate Screening',
+
+          'Fast Laboratory Reports',
+
+          'Professional Medical Guidance'
+
+        ]
+      },
+
+      {
+        heading:
+          'Conditions Screened',
+
+        content:
+          'The test helps identify chromosomal conditions such as Down Syndrome (Trisomy 21), Trisomy 18 and Trisomy 13.'
+      },
+
+      {
+        heading:
+          'Professional Laboratory Process',
+
+        bullets: [
+
+          'Maternal blood sample collection',
+
+          'Advanced DNA sequencing technology',
+
+          'Confidential pregnancy screening',
+
+          'Medical expert report review'
+
+        ]
+      }
+
+    ],
+
+    description:
+      'NIPT testing helps detect chromosomal abnormalities during pregnancy.',
+
+    descriptionSections: [
+
+      {
+        heading: 'Safe Pregnancy Screening',
+        content:
+          'Uses maternal blood sample for advanced genetic screening.'
+      },
+
+      {
+        heading: 'Early Detection',
+        content:
+          'Detects chromosomal abnormalities in early pregnancy.'
+      },
+
+      {
+        heading: 'Professional Accuracy',
+        content:
+          'Advanced laboratory sequencing with highly accurate reports.'
+      }
+
+    ],
+
+    serviceDetails: [
+
+      {
+        service: 'Lab Visit',
+        validity: 'Medical Screening',
+        price: '₹10,000'
+      }
+
+    ]
+  },
+
+  {
+    id: 3,
+
+    title: 'Rabies Antibody Test for Humans',
+
+    slug: 'rabies-antibody-test',
+
+    category: 'PCR TEST',
+
+    price: 3500,
+
+    oldPrice: 6000,
+
+    discount: 49,
+
+    image:
+      'https://dnalabsindia.com/storage/2025/09/wXFdx4DNRjSFy91-s0vBs-768x768.webp',
+
+    images: [
+      'https://dnalabsindia.com/storage/2025/09/wXFdx4DNRjSFy91-s0vBs-768x768.webp'
+    ],
+
+    doctor: 'GENERAL PHYSICIAN',
+
+    reportsTime: '2 Days',
+
+    descriptionContent: [
+
+      {
+        title:
+          'Rabies Antibody Test for Humans'
+      },
+
+      {
+        heading:
+          'What is Rabies Antibody Test?',
+
+        content:
+          'Rabies Antibody Testing measures protective antibodies in the blood to evaluate immunity against rabies infection.'
+      },
+
+      {
+        heading:
+          'Who Should Take This Test?',
+
+        bullets: [
+
+          'Veterinary Doctors',
+
+          'Pet Handlers',
+
+          'Animal Rescue Workers',
+
+          'International Travellers',
+
+          'Post Vaccination Monitoring'
+
+        ]
+      },
+
+      {
+        heading:
+          'Test Advantages',
+
+        bullets: [
+
+          'Reliable Antibody Detection',
+
+          'Professional Blood Collection',
+
+          'Fast PCR Laboratory Analysis',
+
+          'Accurate Immune Status Reports'
+
+        ]
+      },
+
+      {
+        heading:
+          'Medical Importance',
+
+        content:
+          'This test helps verify whether rabies vaccination has produced sufficient immune protection in the body.'
+      }
+
+    ],
+
+    description:
+      'Measures rabies antibodies to verify vaccination effectiveness.',
+
+    descriptionSections: [
+
+      {
+        heading: 'Antibody Detection',
+        content:
+          'Measures immune response against rabies virus.'
+      },
+
+      {
+        heading: 'Post Vaccination Monitoring',
+        content:
+          'Useful after vaccination to verify immunity.'
+      },
+
+      {
+        heading: 'Professional Testing',
+        content:
+          'PCR laboratory analysis with accurate reporting.'
+      }
+
+    ],
+
+    serviceDetails: [
+
+      {
+        service: 'Blood Collection',
+        validity: 'Medical Purpose',
+        price: '₹3,500'
+      }
+
+    ]
+  },
+
+  {
+    id: 4,
+
+    title: 'Food Intolerance Allergy Test',
+
+    slug: 'food-intolerance-allergy-test',
+
+    category: 'ALLERGY TEST',
+
+    price: 6000,
+
+    oldPrice: 8500,
+
+    discount: 29,
+
+    image:
+      'https://dnalabsindia.com/storage/2024/06/food-allergy-intolerance-test-report-cost-768x768.webp',
+
+    images: [
+      'https://dnalabsindia.com/storage/2024/06/food-allergy-intolerance-test-report-cost-768x768.webp'
+    ],
+
+    doctor: 'DERMATOLOGIST',
+
+    reportsTime: '7 Days',
+
+    descriptionContent: [
+
+      {
+        title:
+          'Food Intolerance & Allergy Test'
+      },
+
+      {
+        heading:
+          'What is Food Allergy Testing?',
+
+        content:
+          'Food Allergy and Intolerance Testing identifies foods that may trigger allergic reactions, digestive issues or chronic inflammation.'
+      },
+
+      {
+        heading:
+          'Common Symptoms',
+
+        bullets: [
+
+          'Skin Rashes',
+
+          'Digestive Problems',
+
+          'Chronic Bloating',
+
+          'Headaches & Fatigue',
+
+          'Food Sensitivity Reactions'
+
+        ]
+      },
+
+      {
+        heading:
+          'Why Choose This Test?',
+
+        bullets: [
+
+          'Advanced Allergy Analysis',
+
+          'Professional Laboratory Testing',
+
+          'Accurate Food Sensitivity Detection',
+
+          'Personalized Health Insights',
+
+          'Fast Report Delivery'
+
+        ]
+      },
+
+      {
+        heading:
+          'How It Helps',
+
+        content:
+          'The test helps identify trigger foods so patients can improve diet management and reduce allergy-related symptoms.'
+      }
+
+    ],
+
+    description:
+      'Detects food allergies and intolerance reactions accurately.',
+
+    descriptionSections: [
+
+      {
+        heading: 'Food Sensitivity Analysis',
+        content:
+          'Identifies foods causing allergic or digestive reactions.'
+      },
+
+      {
+        heading: 'Advanced Allergy Detection',
+        content:
+          'Professional laboratory testing for accurate results.'
+      },
+
+      {
+        heading: 'Better Health Management',
+        content:
+          'Helps improve dietary planning and reduce symptoms.'
+      }
+
+    ],
+
+    serviceDetails: [
+
+      {
+        service: 'Allergy Panel',
+        validity: 'Medical Analysis',
+        price: '₹6,000'
+      }
+
+    ]
+  }
+
+];
+
+
+/* =========================
+   AUTO GENERATED MOCK DATA
+========================= */
+
+const AUTO_TESTS: Test[] = Array.from(
+  { length: 996 },
+  (_, index) => {
+
+    const id = index + 5;
+
+    const title = `DNA Test ${id}`;
+
+    const image =
+      `https://picsum.photos/800/800?random=${id}`;
+
+    return {
+
+      id,
+
+      title,
+
+      slug: title
+        .toLowerCase()
+        .replace(/ /g, '-'),
+
+      category: [
+        'DNA TEST',
+        'GENETIC TEST',
+        'PCR TEST',
+        'ALLERGY TEST'
+      ][index % 4],
+
+      price: 1000 + (index * 25),
+
+      oldPrice: 2000 + (index * 50),
+
+      discount: 10 + (index % 70),
+
+      image,
+
+      images: [
+        image,
+        `https://picsum.photos/800/800?random=${id + 1000}`
+      ],
+
+      doctor: [
+        'GENERAL PHYSICIAN',
+        'GENETICIST',
+        'CARDIOLOGIST',
+        'GASTROENTEROLOGIST'
+      ][index % 4],
+
+      reportsTime: [
+        '24 Hours',
+        '2 Days',
+        '5 Days',
+        '7 Days'
+      ][index % 4],
+
+      description:
+        `This is detailed information about ${title}.`,
+
+      descriptionSections: [],
+
+      descriptionContent: [],
+
+      serviceDetails: []
+
+    };
+  }
 );
+
+
+/* =========================
+   FINAL EXPORT
+========================= */
+
+export const TESTS_MOCK: Test[] = [
+  ...REAL_TESTS,
+  ...AUTO_TESTS
+];
 
 export const TOTAL_RESULTS = 6457;

@@ -1,4 +1,4 @@
-<div class="test-card">
+<div class="test-card" [routerLink]="['/test', test.slug]">
   <!-- Discount Badge -->
   <div class="discount-badge" *ngIf="test.discount">
     -{{ test.discount }}%

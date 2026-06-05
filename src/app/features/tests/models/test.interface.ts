@@ -1,14 +1,59 @@
-// features/tests/models/test.interface.ts
+export interface ServiceDetail {
+  service: string;
+  validity: string;
+  price: string;
+}
+
 export interface Test {
+
   id: number;
+
   title: string;
-  category: string;
+
+  slug: string;
   displayCategory?: string;
+  descriptionSections?: {
+  heading: string;
+  content: string;
+}[];
+
+  badge?: string;
+  category: string;
+
   price: number;
-  oldPrice?: number;
-  discount?: number;
+
+  oldPrice: number;
+
+  discount: number;
+
   image: string;
-  reportsIn?: string;
-  doctor?: string; // e.g. "DIABETOLOGIST, GYNECOLOGIST"
-  badge?: string;  // "NA Labs India", etc.
+
+  // MULTIPLE IMAGES
+  images: string[];
+
+  doctor: string;
+
+  reportsTime: string;
+
+  // SHORT DESCRIPTION
+  description: string;
+
+
+  // TABLE DATA
+  serviceDetails: ServiceDetail[];
+  descriptionContent?: DescriptionBlock[];
+
+}
+
+
+export interface DescriptionBlock {
+
+  title?: string;
+
+  heading?: string;
+
+  content?: string;
+
+  bullets?: string[];
+
 }

@@ -77,7 +77,6 @@ export class TestListPageComponent implements OnInit {
   }
 
   bookTest(test: Test) {
-    console.log('Booking test:', test);
     alert(`Booking: ${test.title}`);
   }
   onPriceFilter(filter: { min: number; max: number }) {

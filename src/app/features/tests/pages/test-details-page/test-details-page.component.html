@@ -1,0 +1,344 @@
+<div class="container">
+
+  <div
+    class="details-page"
+    *ngIf="test"
+  >
+
+    <!-- TOP -->
+    <div class="details-wrapper">
+
+      <!-- LEFT -->
+      <div class="left">
+
+        <div class="main-image">
+
+          <img
+            [src]="selectedImage"
+            [alt]="test.title"
+          >
+
+        </div>
+
+        <div class="thumb-list">
+
+          @for (
+            img of test.images;
+            track img
+          ) {
+
+            <img
+              [src]="img"
+              (click)="changeImage(img)"
+              [class.active]="selectedImage === img"
+            >
+
+          }
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="right">
+
+        <p class="category">
+          {{ test.category }}
+        </p>
+
+        <h1 class="title">
+          {{ test.title }}
+        </h1>
+
+        <!-- PRICE -->
+        <div class="price-row">
+
+          <span
+            class="original-price"
+            *ngIf="test.oldPrice"
+          >
+            ₹{{ test.oldPrice | number }}
+          </span>
+
+          <span class="current-price">
+            ₹{{ test.price | number }}
+          </span>
+
+          <span
+            class="discount-badge-large"
+            *ngIf="test.discount"
+          >
+            -{{ test.discount }}%
+          </span>
+
+        </div>
+
+        <!-- SHORT -->
+        <p class="short-description">
+          {{ test.description }}
+        </p>
+
+        <!-- INFO -->
+        <div class="info-box">
+
+          <div>
+
+            <strong>
+              Doctor:
+            </strong>
+
+            {{ test.doctor }}
+
+          </div>
+
+          <div>
+
+            <strong>
+              Reports:
+            </strong>
+
+            {{ test.reportsTime }}
+
+          </div>
+
+        </div>
+
+        <!-- FEATURES -->
+        <ul class="feature-list">
+
+          @for (
+            item of test.descriptionSections;
+            track item.heading
+          ) {
+
+            <li>
+
+              <strong>
+                {{ item.heading }}:
+              </strong>
+
+              {{ item.content }}
+
+            </li>
+
+          }
+
+        </ul>
+
+        <!-- ACTION -->
+        <div class="action-row">
+
+          <!-- QTY -->
+          <div class="qty-wrapper">
+
+            <button
+              (click)="decreaseQty()"
+            >
+              -
+            </button>
+
+            <span>
+              {{ quantity }}
+            </span>
+
+            <button
+              (click)="increaseQty()"
+            >
+              +
+            </button>
+
+          </div>
+
+          <!-- BUTTON -->
+          <button class="primary-btn">
+
+            Book Now
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="content-section">
+
+      <div class="content-header">
+
+        <h2>
+          Description
+        </h2>
+
+        <p>
+          Professional laboratory testing with
+          accurate and confidential reports.
+        </p>
+
+      </div>
+
+      @for (
+        block of test.descriptionContent;
+        track block.heading
+      ) {
+
+        <div class="description-block">
+
+          <!-- MAIN TITLE -->
+          <h1
+            class="description-main-title"
+            *ngIf="block.title"
+          >
+            {{ block.title }}
+          </h1>
+
+          <!-- HEADING -->
+          <h2
+            class="description-heading"
+            *ngIf="block.heading"
+          >
+            {{ block.heading }}
+          </h2>
+
+          <!-- CONTENT -->
+          <p
+            class="description-text"
+            *ngIf="block.content"
+          >
+            {{ block.content }}
+          </p>
+
+          <!-- BULLETS -->
+          <ul
+            class="description-list"
+            *ngIf="block.bullets?.length"
+          >
+
+            @for (
+              item of block.bullets;
+              track item
+            ) {
+
+              <li>
+                {{ item }}
+              </li>
+
+            }
+
+          </ul>
+
+        </div>
+
+      }
+
+    </div>
+
+    <!-- TABLE -->
+    <div
+      class="table-section"
+      *ngIf="test.serviceDetails?.length"
+    >
+
+      <h2>
+        Service Details
+      </h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>
+              Service
+            </th>
+
+            <th>
+              Validity
+            </th>
+
+            <th>
+              Price
+            </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          @for (
+            item of test.serviceDetails;
+            track item.service
+          ) {
+
+            <tr>
+
+              <td>
+                {{ item.service }}
+              </td>
+
+              <td>
+                {{ item.validity }}
+              </td>
+
+              <td>
+                {{ item.price }}
+              </td>
+
+            </tr>
+
+          }
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <!-- RELATED -->
+    <div class="related-section">
+
+      <h2 class="related-title">
+
+        Related Tests
+
+      </h2>
+
+      <div class="related-scroll">
+
+        @for (
+          item of relatedTests;
+          track item.id
+        ) {
+
+          <div class="related-card">
+
+            <img
+              [src]="item.image"
+            >
+
+            <div class="related-content">
+
+              <h4>
+                {{ item.title }}
+              </h4>
+
+              <p>
+                ₹{{ item.price }}
+              </p>
+
+            </div>
+
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

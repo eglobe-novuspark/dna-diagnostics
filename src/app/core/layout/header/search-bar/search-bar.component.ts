@@ -19,4 +19,5 @@ export class SearchBarComponent {
   onSearch() {
     this.results = this.searchService.searchTests(this.searchText);
   }
+  
 }

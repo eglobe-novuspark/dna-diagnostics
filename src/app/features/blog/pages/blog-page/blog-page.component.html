@@ -1,0 +1,100 @@
+<div class="container">
+
+  <div class="blog-page">
+
+    <!-- TOP -->
+    <div class="page-header">
+
+      <p>
+        Home / Blog
+      </p>
+
+      <h1>
+        Blog
+      </h1>
+
+    </div>
+
+    <!-- LAYOUT -->
+    <div class="blog-layout">
+
+      <!-- LEFT -->
+      <div class="blog-left">
+
+        <div class="blog-grid">
+
+          @for (
+            blog of blogs;
+            track blog.id
+          ) {
+
+            <a
+              class="blog-card"
+              [routerLink]="['/blog', blog.slug]"
+            >
+
+              <img [src]="blog.image">
+
+              <h2>
+                {{ blog.title }}
+              </h2>
+
+              <span>
+                {{ blog.date }}
+              </span>
+
+              <p>
+                {{ blog.shortDescription }}
+              </p>
+
+            </a>
+
+          }
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="blog-sidebar">
+
+        <img
+          class="author-image"
+          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop"
+        >
+
+        <h3>
+          DNA Labs India
+        </h3>
+
+        <p>
+          DNA Labs India is renowned for utilizing
+          cutting-edge technology to ensure highly
+          accurate DNA testing services across India.
+        </p>
+
+        <div class="archives">
+
+          <h4>
+            Archives
+          </h4>
+
+          <ul>
+
+            <li>May 2026</li>
+            <li>April 2026</li>
+            <li>March 2026</li>
+            <li>February 2026</li>
+            <li>January 2026</li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

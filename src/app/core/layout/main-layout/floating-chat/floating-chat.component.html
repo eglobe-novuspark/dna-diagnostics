@@ -1,0 +1,42 @@
+<!-- Floating Button -->
+<button class="whatsapp-float" (click)="toggleChat()">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</button>
+
+<!-- Chat Popup -->
+<div *ngIf="isOpen" class="chat-popup">
+
+  <!-- Header -->
+  <div class="chat-header">
+    <div class="profile">
+      <img [src]="doctorImage" alt="Dr Archana" class="avatar">
+      <div class="info">
+        <h3>Dr Archana</h3>
+        <p>● Online | Typically replies instantly</p>
+      </div>
+    </div>
+    <button class="close-btn" (click)="toggleChat()">✕</button>
+  </div>
+
+  <!-- Chat Messages -->
+  <div class="chat-body">
+    <div *ngFor="let msg of messages" 
+         class="message" 
+         [class.user-message]="msg.from === 'user'"
+         [class.doctor-message]="msg.from === 'doctor'">
+      <p>{{ msg.text }}</p>
+      <span class="time">{{ msg.time }}</span>
+    </div>
+  </div>
+
+  <!-- Input Area -->
+  <div class="chat-footer">
+    <input 
+      type="text" 
+      [(ngModel)]="newMessage" 
+      placeholder="Type your message..." 
+      (keyup.enter)="sendMessage()"
+      class="chat-input">
+    <button class="send-btn" (click)="sendMessage()">Send</button>
+  </div>
+</div>

@@ -1,0 +1,175 @@
+.contact-page {
+  padding-bottom: 50px;
+}
+
+/* =========================
+   MAP
+========================= */
+
+.map-section {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+
+  padding: 50px 0;
+}
+
+.contact-column h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  color: #111827;
+
+  margin-bottom: 30px;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.contact-card {
+  margin-bottom: 34px;
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.contact-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+
+  color: #111827;
+
+  margin-bottom: 10px;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-card p {
+  font-size: 14px;
+  line-height: 1.8;
+
+  color: #4b5563;
+
+  margin-bottom: 10px;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-card span {
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #6b7280;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+/* =========================
+   FEATURE STRIP
+========================= */
+
+.feature-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+.feature-box h4 {
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #111827;
+
+  margin-bottom: 8px;
+
+  line-height: 1.5;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+.feature-box p {
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: #6b7280;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 991px) {
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .feature-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .map-section {
+    height: 280px;
+  }
+
+  .contact-column h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .contact-card h3 {
+    font-size: 16px;
+  }
+
+  .contact-card p,
+  .contact-card span {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .feature-strip {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .feature-box h4 {
+    font-size: 15px;
+  }
+
+  .feature-box p {
+    font-size: 13px;
+  }
+
+}

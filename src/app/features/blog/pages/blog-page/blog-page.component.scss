@@ -1,0 +1,66 @@
+.blog-sidebar {
+
+  position: sticky;
+
+  top: 90px;
+
+}
+.blog-layout {
+
+  display: grid;
+
+  grid-template-columns: 1fr 320px;
+
+  gap: 40px;
+
+}
+
+.blog-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 30px;
+
+}
+
+.blog-card img {
+
+  width: 100%;
+
+  height: 240px;
+
+  object-fit: cover;
+
+}
+
+.blog-card h2 {
+
+  font-size: 20px;
+
+  line-height: 1.4;
+
+  margin: 14px 0;
+
+}
+
+.blog-card p {
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #4b5563;
+
+}
+
+.blog-sidebar {
+
+  position: sticky;
+
+  top: 90px;
+
+  align-self: start;
+
+}

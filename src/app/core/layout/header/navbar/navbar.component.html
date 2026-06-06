@@ -2,18 +2,27 @@
   <div class="container nav-wrapper">
 
     <div class="nav-links">
-
-      <a routerLink="/" routerLinkActive="active" class="nav-link">
-        Home
-      </a>
-
-      <a routerLink="/about" routerLinkActive="active" class="nav-link">
-        About
-      </a>
-
-      <a routerLink="/tests" routerLinkActive="active" class="nav-link">
-        Test List
-      </a>
+<a
+  routerLink="/"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }"
+  class="nav-link">
+  Home
+</a>
+<a
+  routerLink="/about"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }"
+  class="nav-link">
+  About
+</a>
+<a
+  routerLink="/tests"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }"
+  class="nav-link">
+  Test List
+</a>
 
       <a routerLink="/blog" routerLinkActive="active" class="nav-link">
         Blog

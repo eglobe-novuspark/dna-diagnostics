@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
 import { MobileSidebarComponent } from '../mobile-sidebar/mobile-sidebar.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-mobile-header',
   standalone: true,
-  imports: [SearchBarComponent,SearchBarComponent,MobileSidebarComponent],
+  imports: [SearchBarComponent,SearchBarComponent,MobileSidebarComponent,RouterLink],
   templateUrl: './mobile-header.component.html',
   styleUrl: './mobile-header.component.scss'
 })

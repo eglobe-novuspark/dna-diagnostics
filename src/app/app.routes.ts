@@ -18,7 +18,25 @@ export const routes: Routes = [
   loadComponent: () =>
     import('./features/blog/pages/blog-details-page/blog-details-page.component')
       .then(m => m.BlogDetailsPageComponent)
-}
+},
         
- 
+ {
+  path: 'login',
+  loadComponent: () =>
+    import('./features/auth/login-pages/login-pages.component')
+      .then(m => m.LoginPagesComponent)
+},
+{
+  path: 'cart',
+  loadComponent: () =>
+    import('./features/cart/pages/cart-page/cart-page.component')
+      .then(m => m.CartPageComponent)
+},
+
+{
+  path: 'checkout',
+  loadComponent: () =>
+    import('./features/cart/pages/checkout-page/checkout-page.component')
+      .then(m => m.CheckoutPageComponent)
+},
 ];

@@ -1,41 +1,96 @@
 @if (isOpen()) {
 
-  <div
-    class="sidebar-overlay"
-    (click)="closeSidebar.emit()"
-  ></div>
+<div
+  class="sidebar-overlay"
+  (click)="closeSidebar.emit()">
+</div>
 
 }
 
 <div
   class="mobile-sidebar"
-  [class.open]="isOpen()"
->
+  [class.open]="isOpen()">
 
   <div class="sidebar-header">
 
-    <h3>Menu</h3>
+    <div class="sidebar-logo">
+      <img
+        src="assets/logo4.png"
+        alt="DNA Labs">
+    </div>
 
     <button
       class="close-btn"
-      (click)="closeSidebar.emit()"
-    >
-      ✕
+      (click)="closeSidebar.emit()">
+
+      <i class="bi bi-x-lg"></i>
+
     </button>
 
   </div>
 
   <ul class="sidebar-links">
 
-    <li routerLink="/" >Home</li>
+    <li>
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}"
+        (click)="closeSidebar.emit()">
 
-    <li routerLink="/about" >About</li>
+        <i class="bi bi-house-door"></i>
+        <span>Home</span>
 
-    <li routerLink="/tests" >Test List</li>
+      </a>
+    </li>
 
-    <li routerLink="/blog">Blog</li>
+    <li>
+      <a
+        routerLink="/about"
+        routerLinkActive="active"
+        (click)="closeSidebar.emit()">
 
-    <li routerLink="/contact-us"> Contact</li>
+        <i class="bi bi-info-circle"></i>
+        <span>About Us</span>
+
+      </a>
+    </li>
+
+    <li>
+      <a
+        routerLink="/tests"
+        routerLinkActive="active"
+        (click)="closeSidebar.emit()">
+
+        <i class="bi bi-clipboard2-pulse"></i>
+        <span>DNA Tests</span>
+
+      </a>
+    </li>
+
+    <li>
+      <a
+        routerLink="/blog"
+        routerLinkActive="active"
+        (click)="closeSidebar.emit()">
+
+        <i class="bi bi-journal-text"></i>
+        <span>Blog</span>
+
+      </a>
+    </li>
+
+    <li>
+      <a
+        routerLink="/contact-us"
+        routerLinkActive="active"
+        (click)="closeSidebar.emit()">
+
+        <i class="bi bi-telephone"></i>
+        <span>Contact Us</span>
+
+      </a>
+    </li>
 
   </ul>
 

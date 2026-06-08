@@ -1,4 +1,4 @@
-<div class="mobile-header">
+<!-- <div class="mobile-header">
 
   <div class="container">
 
@@ -36,4 +36,73 @@
   ngSkipHydration
   [isOpen]="isSidebarOpen()"
   (closeSidebar)="closeSidebar()"
-></app-mobile-sidebar>
+></app-mobile-sidebar> -->
+
+
+
+
+<!-- TOP SEARCH HEADER -->
+
+<div class="mobile-top-search">
+
+  <div class="search-wrapper">
+
+    <div class="search-box">
+      <app-search-bar />
+    </div>
+
+  </div>
+
+</div>
+
+<!-- SIDEBAR -->
+
+<app-mobile-sidebar
+  ngSkipHydration
+  [isOpen]="isSidebarOpen()"
+  (closeSidebar)="closeSidebar()"
+>
+</app-mobile-sidebar>
+
+<!-- BOTTOM NAVIGATION -->
+
+<nav class="mobile-bottom-nav">
+
+  <!-- MENU -->
+  <a
+    class="nav-item"
+    (click)="openSidebar()"
+  >
+    <span class="icon">☰</span>
+    <span class="label">Menu</span>
+  </a>
+
+  <!-- TEST -->
+  <a class="nav-item">
+    <span class="icon">🧬</span>
+    <span class="label">Tests</span>
+  </a>
+
+  <!-- CENTER LOGO -->
+  <a class="center-logo" >
+
+    <img
+      src="assets/logo-mobile.png"
+      alt="logo"
+    />
+
+  </a>
+
+  <!-- REPORT -->
+  <a class="nav-item">
+    <span class="icon">📄</span>
+    <span class="label">Reports</span>
+  </a>
+
+  <!-- PROFILE -->
+  <a class="nav-item">
+    <span class="icon">👤</span>
+    <span class="label">Profile</span>
+  </a>
+
+</nav>

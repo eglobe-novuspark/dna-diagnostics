@@ -139,33 +139,117 @@
   }
 }
 
-/* Small Mobile */
 @media (max-width: 576px) {
+
+  .test-category-section {
+    padding: 10px 0;
+  }
+
   .test-grid {
-    grid-template-columns: repeat(1, 1fr);   /* 2 Cards in Mobile */
-    gap: 16px;
-  }
-  .test-image {
-    height: 220px;
-  }
-  .section-title {
-    font-size: 24px;
-  }
-  .test-image {
-  position: relative;
-  height: 280px;
-  width: 100%;
-  overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 12px;
 
-  img {
+    padding: 0 12px 10px;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+  }
+
+  .test-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .test-card {
+    flex: 0 0 48%;
+    min-width: 48%;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  }
+
+  .test-image {
     width: 100%;
-    height: 100%;
-    object-fit: fill;
-    transition: transform 0.5s ease;
+    height: 130px;
   }
 
-  &:hover img {
-    transform: scale(1.08);
+  .test-image img {
+    object-fit: cover;
   }
+
+  .discount-badge {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .test-content {
+    padding: 8px;
+  }
+
+  .test-category {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+
+.test-title {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #1f2937;
+
+  height: 38px; /* fixed height */
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  margin-bottom: 8px;
 }
+
+  .old-price {
+    font-size: 11px;
+  }
+
+  .new-price {
+    font-size: 14px;
+  }
+
+.primary-btn,
+.book-btn {
+  height: 30px;
+  min-width: 90px;
+
+  padding: 0 12px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #22c55e;
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.primary-btn:hover,
+.book-btn:hover {
+  background: #16a34a;
+}
+
+  .section-title {
+    font-size: 22px;
+    text-align: center;
+  }
 }

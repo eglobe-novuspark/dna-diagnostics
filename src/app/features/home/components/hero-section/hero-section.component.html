@@ -1,4 +1,4 @@
-<section class="hero-section">
+<!-- <section class="hero-section">
   <div class="hero-container">
 
     <div class="hero-content">
@@ -32,4 +32,296 @@
     </div>
 
   </div>
+</section> -->
+
+
+
+<section class="hero-banner">
+
+  <div class="slides-container">
+
+    <!-- SLIDE 1 -->
+    <div
+      class="slide"
+      [class.active]="currentSlide === 0"
+    >
+
+      <picture>
+
+        <!-- MOBILE -->
+        <source
+          media="(max-width: 768px)"
+          srcset="assets/mobilebanner.png"
+        >
+
+        <!-- DESKTOP -->
+        <source
+          media="(min-width: 769px)"
+          srcset="assets/banner-primium.png"
+        >
+
+        <img
+          src="assets/banner-primium.png"
+          class="slide-bg"
+          alt="banner"
+        >
+
+      </picture>
+
+      <div class="overlay"></div>
+
+      <div class="container">
+
+        <div class="content animate">
+
+          <span class="top-tag">
+            India’s Trusted Diagnostic Center
+          </span>
+
+          <h1>
+            Advanced DNA & Pathology
+            <span class="highlight">
+              Testing Laboratory
+            </span>
+          </h1>
+
+          <p>
+            Accurate reports, modern technology and trusted diagnostics
+            with thousands of samples tested every day.
+          </p>
+
+          <div class="hero-buttons">
+
+            <button class="primary-btn">
+              Book Test
+            </button>
+
+            <button class="secondary-btn">
+              View Packages
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div
+      class="slide"
+      [class.active]="currentSlide === 1"
+    >
+
+      <picture>
+
+        <!-- MOBILE -->
+        <source
+          media="(max-width: 768px)"
+          srcset="assets/mobilebanner1.png"
+        >
+
+        <!-- DESKTOP -->
+        <source
+          media="(min-width: 769px)"
+          srcset="assets/banner-premium2.png"
+        >
+
+        <img
+          src="assets/banner-premium2.png"
+          class="slide-bg"
+          alt="banner"
+        >
+
+      </picture>
+
+      <div class="overlay"></div>
+
+      <div class="container">
+
+        <div class="content animate">
+
+          <span class="top-tag">
+            India’s Trusted Diagnostic Center
+          </span>
+
+          <h1>
+            Advanced
+            <span class="highlight">
+              Genomic Solutions
+            </span>
+          </h1>
+
+          <p>
+            Molecular Diagnosis & Precision Medicine
+          </p>
+
+          <div class="hero-buttons">
+
+            <button class="primary-btn">
+              Book Test
+            </button>
+
+            <button class="secondary-btn">
+              View Packages
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div
+      class="slide"
+      [class.active]="currentSlide === 2"
+    >
+
+      <picture>
+
+        <!-- MOBILE -->
+        <source
+          media="(max-width: 768px)"
+          srcset="assets/mobilebanner3.png"
+        >
+
+        <!-- DESKTOP -->
+        <source
+          media="(min-width: 769px)"
+          srcset="assets/pathology-slider3.png"
+        >
+
+        <img
+          src="assets/pathology-slider3.png"
+          class="slide-bg"
+          alt="banner"
+        >
+
+      </picture>
+
+      <div class="overlay"></div>
+
+      <div class="container">
+
+        <div class="content animate">
+
+          <span class="top-tag">
+            India’s Trusted Diagnostic Center
+          </span>
+
+          <h1>
+            Personalized
+            <span class="highlight">
+              Care & Counseling
+            </span>
+          </h1>
+
+          <p>
+            Start Your Genomics Journey
+          </p>
+
+          <div class="hero-buttons">
+
+            <button class="primary-btn">
+              Book Test
+            </button>
+
+            <button class="secondary-btn">
+              View Packages
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div
+      class="slide"
+      [class.active]="currentSlide === 3"
+    >
+
+      <picture>
+
+        <!-- MOBILE -->
+        <source
+          media="(max-width: 768px)"
+          srcset="assets/mobilebanner2.png"
+        >
+
+        <!-- DESKTOP -->
+        <source
+          media="(min-width: 769px)"
+          srcset="assets/pathology-slider4.png"
+        >
+
+        <img
+          src="assets/pathology-slider4.png"
+          class="slide-bg"
+          alt="banner"
+        >
+
+      </picture>
+
+      <div class="overlay"></div>
+
+      <div class="container">
+
+        <div class="content animate">
+
+          <span class="top-tag">
+            India’s Trusted Diagnostic Center
+          </span>
+
+          <h1>
+            <span class="highlight">
+              Global Standard
+            </span>
+            Lab Services
+          </h1>
+
+          <p>
+            NABL Accredited Facility in India
+          </p>
+
+          <div class="hero-buttons">
+
+            <button class="primary-btn">
+              Book Test
+            </button>
+
+            <button class="secondary-btn">
+              View Packages
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- DOTS -->
+  <div class="dots">
+
+    <span
+      class="dot"
+      *ngFor="let n of [0,1,2,3]; let i = index"
+      [class.active]="currentSlide === i"
+      (click)="goToSlide(i)"
+    >
+    </span>
+
+  </div>
+
 </section>

@@ -2,6 +2,7 @@ import { Component, signal, ViewChild } from '@angular/core';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
 import { MobileSidebarComponent } from '../mobile-sidebar/mobile-sidebar.component';
 import { FloatingChatComponent } from '../../main-layout/floating-chat/floating-chat.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-mobile-header',
@@ -9,7 +10,8 @@ import { FloatingChatComponent } from '../../main-layout/floating-chat/floating-
   imports: [
     SearchBarComponent,
     MobileSidebarComponent,
-    FloatingChatComponent
+    FloatingChatComponent,
+    RouterLink
   ],
   templateUrl: './mobile-header.component.html',
   styleUrl: './mobile-header.component.scss'

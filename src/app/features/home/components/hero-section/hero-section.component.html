@@ -40,10 +40,77 @@
 
   <div class="slides-container">
 
+     <div
+      class="slide"
+      [class.active]="currentSlide === 0"
+    >
+
+      <picture>
+
+        <!-- MOBILE -->
+        <source
+          media="(max-width: 768px)"
+          srcset="assets/slider2.png"
+        >
+
+        <!-- DESKTOP -->
+        <source
+          media="(min-width: 769px)"
+          srcset="assets/slider1-desktop.png"
+        >
+
+        <img
+          src="assets/slider1-desktop.png"
+          class="slide-bg"
+          alt="banner"
+        >
+
+      </picture>
+
+      <div class="overlay"></div>
+
+      <div class="container">
+
+        <div class="content animate">
+
+          <!-- <span class="top-tag">
+            India’s Trusted Diagnostic Center
+          </span> -->
+
+          <h1>
+           India’s Trusted 
+            <span class="highlight">
+              Diagnostic Center
+            </span>
+          </h1>
+
+          <!-- <p>
+            Accurate reports, modern technology and trusted diagnostics
+            with thousands of samples tested every day.
+          </p> -->
+
+          <div class="hero-buttons">
+
+            <button class="primary-btn">
+              Book Test
+            </button>
+
+            <button class="secondary-btn">
+              View Packages
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
     <!-- SLIDE 1 -->
     <div
       class="slide"
-      [class.active]="currentSlide === 0"
+      [class.active]="currentSlide === 1"
     >
 
       <picture>
@@ -108,10 +175,11 @@
 
     </div>
 
+    
     <!-- SLIDE 2 -->
     <div
       class="slide"
-      [class.active]="currentSlide === 1"
+      [class.active]="currentSlide === 2"
     >
 
       <picture>
@@ -178,7 +246,7 @@
     <!-- SLIDE 3 -->
     <div
       class="slide"
-      [class.active]="currentSlide === 2"
+      [class.active]="currentSlide === 3"
     >
 
       <picture>
@@ -245,7 +313,7 @@
     <!-- SLIDE 4 -->
     <div
       class="slide"
-      [class.active]="currentSlide === 3"
+      [class.active]="currentSlide === 4"
     >
 
       <picture>

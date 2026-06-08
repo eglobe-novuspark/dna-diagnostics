@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './mobile-sidebar.component.scss'
 })
 export class MobileSidebarComponent {
-isOpen = input(false);
+isOpen = input(true);
 
   closeSidebar = output<void>();
 }

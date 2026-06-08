@@ -71,7 +71,7 @@
   <!-- MENU -->
   <a
     class="nav-item"
-    (click)="openSidebar()"
+    (click)="toggleSidebar()"
   >
     <span class="icon">☰</span>
     <span class="label">Menu</span>
@@ -99,10 +99,16 @@
     <span class="label">Reports</span>
   </a>
 
-  <!-- PROFILE -->
-  <a class="nav-item">
-    <span class="icon">👤</span>
-    <span class="label">Profile</span>
-  </a>
+ <a
+  class="nav-item whatsapp-nav"
+  (click)="openWhatsAppChat()"
+>
+  <span class="icon">
+    <i class="bi bi-whatsapp"></i>
+  </span>
 
+  <span class="label">
+    WhatsApp
+  </span>
+</a><app-floating-chat></app-floating-chat>
 </nav>

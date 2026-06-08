@@ -1,17 +1,26 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ViewChild } from '@angular/core';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
 import { MobileSidebarComponent } from '../mobile-sidebar/mobile-sidebar.component';
-import { RouterLink } from '@angular/router';
+import { FloatingChatComponent } from '../../main-layout/floating-chat/floating-chat.component';
 
 @Component({
   selector: 'app-mobile-header',
   standalone: true,
-  imports: [SearchBarComponent,SearchBarComponent,MobileSidebarComponent,RouterLink],
+  imports: [
+    SearchBarComponent,
+    MobileSidebarComponent,
+    FloatingChatComponent
+  ],
   templateUrl: './mobile-header.component.html',
   styleUrl: './mobile-header.component.scss'
 })
 export class MobileHeaderComponent {
+
+  @ViewChild(FloatingChatComponent)
+  chatComponent!: FloatingChatComponent;
+
   isSidebarOpen = signal(false);
+
   openSidebar() {
     this.isSidebarOpen.set(true);
   }
@@ -19,4 +28,11 @@ export class MobileHeaderComponent {
   closeSidebar() {
     this.isSidebarOpen.set(false);
   }
+
+  openWhatsAppChat() {
+    this.chatComponent?.toggleChat();
+  }
+  toggleSidebar() {
+  this.isSidebarOpen.update(value => !value);
+}
 }

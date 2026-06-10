@@ -1,30 +1,120 @@
-<div class="container">
+<!-- =========================
+     BLOG HERO BANNER
+========================= -->
 
-  <div class="blog-page">
+<section class="blog-hero-banner">
 
-    <!-- TOP -->
-    <!-- <div class="page-header">
+  <div class="blog-hero-overlay"></div>
 
-      <p>
-        Home / Blog
+  <div class="container">
+
+    <div class="blog-hero-content">
+
+      <p class="hero-subtitle">
+        DNA Labs India Articles & Insights
       </p>
 
       <h1>
-        Blog
+        Latest DNA Testing,
+        Genetic & Healthcare Blogs
       </h1>
 
-    </div> -->
+      <p class="hero-description">
+        Explore expert articles, diagnostic insights,
+        DNA testing guides and modern healthcare updates
+        from DNA Labs India.
+      </p>
 
-    <!-- LAYOUT -->
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     BLOG PAGE
+========================= -->
+
+<div class="container">
+
+  <section class="blog-page">
+
+    <!-- TOP SECTION -->
+
+    <div class="blog-top-section">
+
+      <div class="section-header">
+
+        <h2 class="section-title">
+          Latest Articles
+        </h2>
+
+        <p class="section-description">
+          Discover healthcare insights, genetic testing guides,
+          wellness updates and expert DNA diagnostic knowledge.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- FEATURED BLOG -->
+
+    <div
+      class="featured-blog"
+      *ngIf="blogs?.length"
+    >
+
+      <div class="featured-image">
+
+        <img
+          [src]="blogs[0].image"
+          [alt]="blogs[0].title"
+        >
+
+      </div>
+
+      <div class="featured-content">
+
+        <span class="featured-badge">
+          Featured Article
+        </span>
+
+        <h2>
+          {{ blogs[0].title }}
+        </h2>
+
+        <p class="featured-date">
+          {{ blogs[0].date }}
+        </p>
+
+        <p class="featured-description">
+          {{ blogs[0].shortDescription }}
+        </p>
+
+        <a
+          class="read-btn"
+          [routerLink]="['/blog', blogs[0].slug]"
+        >
+          Read Full Article
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- BLOG LAYOUT -->
+
     <div class="blog-layout">
 
       <!-- LEFT -->
+
       <div class="blog-left">
 
         <div class="blog-grid">
 
           @for (
-            blog of blogs;
+            blog of blogs.slice(1);
             track blog.id
           ) {
 
@@ -33,19 +123,48 @@
               [routerLink]="['/blog', blog.slug]"
             >
 
-              <img [src]="blog.image">
+              <!-- IMAGE -->
 
-              <h2>
-                {{ blog.title }}
-              </h2>
+              <div class="blog-image">
 
-              <span>
-                {{ blog.date }}
-              </span>
+                <img
+                  [src]="blog.image"
+                  [alt]="blog.title"
+                >
 
-              <p>
-                {{ blog.shortDescription }}
-              </p>
+                <div class="blog-date-badge">
+                  {{ blog.date }}
+                </div>
+
+              </div>
+
+              <!-- CONTENT -->
+
+              <div class="blog-content">
+
+                <span class="blog-category">
+                  DNA Labs India
+                </span>
+
+                <h3>
+                  {{ blog.title }}
+                </h3>
+
+                <p>
+                  {{ blog.shortDescription }}
+                </p>
+
+                <div class="blog-footer">
+
+                  <span class="read-more">
+                    Read More
+                  </span>
+
+                  <i class="fas fa-arrow-right"></i>
+
+                </div>
+
+              </div>
 
             </a>
 
@@ -56,45 +175,102 @@
       </div>
 
       <!-- RIGHT -->
-      <div class="blog-sidebar">
 
-        <img
-          class="author-image"
-          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop"
-        >
+      <aside class="blog-sidebar">
 
-        <h3>
-          DNA Labs India
-        </h3>
+        <!-- ABOUT -->
 
-        <p>
-          DNA Labs India is renowned for utilizing
-          cutting-edge technology to ensure highly
-          accurate DNA testing services across India.
-        </p>
+        <div class="sidebar-card">
 
-        <div class="archives">
+          <div class="sidebar-logo">
+
+            <img
+              src="assets/logo.png"
+              alt="DNA Labs India"
+            >
+
+          </div>
+
+          <h3>
+            DNA Labs India
+          </h3>
+
+          <p>
+            Trusted leader in DNA testing,
+            pathology and genetic diagnostics
+            with modern laboratory technology.
+          </p>
+
+        </div>
+
+        <!-- CATEGORIES -->
+
+        <div class="sidebar-card">
 
           <h4>
-            Archives
+            Categories
           </h4>
 
-          <ul>
+          <ul class="sidebar-links">
 
-            <li>May 2026</li>
-            <li>April 2026</li>
-            <li>March 2026</li>
-            <li>February 2026</li>
-            <li>January 2026</li>
+            <li>
+              DNA Testing
+            </li>
+
+            <li>
+              Genetic Screening
+            </li>
+
+            <li>
+              Pathology
+            </li>
+
+            <li>
+              Health & Wellness
+            </li>
+
+            <li>
+              Diagnostics
+            </li>
 
           </ul>
 
         </div>
 
-      </div>
+        <!-- RECENT -->
+
+        <div class="sidebar-card">
+
+          <h4>
+            Recent Posts
+          </h4>
+
+          <ul class="recent-posts">
+
+            <li>
+              Importance of Genetic Testing
+            </li>
+
+            <li>
+              Modern DNA Diagnostics
+            </li>
+
+            <li>
+              Understanding Genomic Reports
+            </li>
+
+            <li>
+              Benefits of Preventive Screening
+            </li>
+
+          </ul>
+
+        </div>
+
+      </aside>
 
     </div>
 
-  </div>
+  </section>
 
 </div>

@@ -1,12 +1,16 @@
 <div class="search-wrapper">
 
 <div class="search-bar">
+
+  <i class="bi bi-search search-icon"></i>
+
   <input
     type="text"
-    placeholder="Search tests..."
+    placeholder="Search DNA tests..."
     [(ngModel)]="searchText"
     (input)="onSearch()"
   />
+
 </div>
 
   @if (results.length > 0) {

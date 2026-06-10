@@ -93,7 +93,7 @@ export const TESTS_MOCK: Test[] = [
     description: 'Verify biological sibling relationships accurately.',
     price: 900,
     oldPrice: 1000,
-    image: 'https://dnalabsindia.com/storage/2024/06/genetic-test-id-1-768x768.webp',
+    image: 'assets/bone.png',
     popular:true,
   },
 
@@ -124,7 +124,7 @@ export const TESTS_MOCK: Test[] = [
     description: 'Understand genetic diabetes predisposition.',
     price: 900,
     oldPrice: 1000,
-    image: 'https://dnalabsindia.com/storage/2024/06/genetic-test-id-2-768x768.webp',
+    image: 'assets/congenital.png',
     popular:true,
     
   },
@@ -138,7 +138,7 @@ export const TESTS_MOCK: Test[] = [
     description: 'Evaluate inherited heart disease risks.',
     price: 1000,
     oldPrice: 1200,
-    image: 'https://dnalabsindia.com/storage/2024/06/genetic-test-id-3-768x768.webp',
+    image: 'assets/Beta.png',
     popular:true
   },
   
@@ -152,7 +152,7 @@ export const TESTS_MOCK: Test[] = [
     description: 'Analyze obesity-related genetic markers.',
     price: 9499,
     oldPrice: 11499,
-    image: 'https://dnalabsindia.com/storage/2024/06/genetic-test-id-4-768x768.webp',
+    image: 'assets/catecholamines.png',
     popular:true,
   },
   

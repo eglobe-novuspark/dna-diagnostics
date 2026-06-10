@@ -1,51 +1,43 @@
-<!-- <div class="mobile-header">
+<!-- ANNOUNCEMENT BAR -->
 
-  <div class="container">
+<div class="announcement-bar">
+  Get Tested at India ⚡ No1 Genetic DNA Test Lab
+</div>
 
-    <div class="mobile-top">
+<!-- TOP CATEGORY BAR -->
 
-      <button
-        class="menu-btn"
-        (click)="openSidebar()"
-      >
-        ☰
-      </button>
+<div class="top-categories">
 
-      <div class="mobile-logo">
-        <img
-          src="assets/logo4.png"
-          alt="logo"
-        />
-      </div>
+  <div class="category-chip">
+    DNA Test
+  </div>
 
-      <button class="cart-btn" routerLink="/cart">
-        🛒
-      </button>
+  <div class="category-chip">
+    Pathology
+  </div>
 
-    </div>
+  <div class="category-chip">
+    Health Checkup
+  </div>
 
-    <div class="mobile-search">
-      <app-search-bar />
-    </div>
-
+  <div class="category-chip">
+    Full Body
   </div>
 
 </div>
 
-<app-mobile-sidebar
-  ngSkipHydration
-  [isOpen]="isSidebarOpen()"
-  (closeSidebar)="closeSidebar()"
-></app-mobile-sidebar> -->
-
-
-
-
-<!-- TOP SEARCH HEADER -->
+<!-- STICKY SEARCH HEADER -->
 
 <div class="mobile-top-search">
 
   <div class="search-wrapper">
+
+    <button
+      class="menu-btn"
+      (click)="toggleSidebar()"
+    >
+      ☰
+    </button>
 
     <div class="search-box">
       <app-search-bar />
@@ -84,10 +76,10 @@
   </a>
 
   <!-- CENTER LOGO -->
-  <a class="center-logo" >
+  <a class="center-logo">
 
     <img
-      src="assets/logo-mobile.png"
+      src="assets/logo-mobile1.png"
       alt="logo"
     />
 
@@ -99,16 +91,20 @@
     <span class="label">Reports</span>
   </a>
 
- <a
-  class="nav-item whatsapp-nav"
-  (click)="openWhatsAppChat()"
->
-  <span class="icon">
-    <i class="bi bi-whatsapp"></i>
-  </span>
+  <!-- WHATSAPP -->
+  <a
+    class="nav-item whatsapp-nav"
+    (click)="openWhatsAppChat()"
+  >
+    <span class="icon">
+      <i class="bi bi-whatsapp"></i>
+    </span>
 
-  <span class="label">
-    WhatsApp
-  </span>
-</a><app-floating-chat></app-floating-chat>
+    <span class="label">
+      WhatsApp
+    </span>
+  </a>
+
 </nav>
+
+<app-floating-chat></app-floating-chat>

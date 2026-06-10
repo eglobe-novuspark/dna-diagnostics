@@ -1,166 +1,381 @@
 .test-category-section {
-  padding: 10px;
+  padding: 20px 0;
 }
 
-.title-bar {
-  padding: 18px 0;
-  margin-bottom: 10px;
-  border-radius: 8px;
+/* ==========================
+   SECTION HEADER
+========================== */
+
+.section-header {
+  margin-bottom: 30px;
   text-align: center;
 }
 
+.section-title {
+  margin: 0;
 
+  font-size: 36px;
+  font-weight: 600;
+
+  color: #0f172a;
+}
+
+/* ==========================
+   GRID
+========================== */
 
 .test-grid {
   display: grid;
+
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+
+  gap: 28px;
 }
+
+/* ==========================
+   CARD
+========================== */
 
 .test-card {
+  position: relative;
+
   background: #fff;
-  border-radius: 1px;
+
+  border-radius: 24px;
+
   overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s ease;
+
+  border: 1px solid #eef2f7;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, .06);
+
+  transition: all .35s ease;
+
+  display: flex;
+  flex-direction: column;
+
   height: 100%;
 
-//   &:hover {
-//     transform: translateY(-10px);
-//     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-//   }
+  cursor: pointer;
 }
+
+.test-card::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(68, 161, 163, .05),
+      transparent 45%
+    );
+
+  opacity: 0;
+
+  transition: .35s ease;
+
+  pointer-events: none;
+}
+
+.test-card:hover::before {
+  opacity: 1;
+}
+
+.test-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 25px 50px rgba(15, 23, 42, .12);
+}
+
+/* ==========================
+   IMAGE
+========================== */
 
 .test-image {
   position: relative;
-  height: 300px;
+
   width: 100%;
+  height: 260px;
+
   overflow: hidden;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-
-  &:hover img {
-    transform: scale(1.08);
-  }
 }
+
+.test-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform .5s ease;
+}
+
+.test-card:hover .test-image img {
+  transform: scale(1.08);
+}
+
+/* ==========================
+   DISCOUNT BADGE
+========================== */
 
 .discount-badge {
   position: absolute;
-  top: 5px;
-  left: 5px;
+
+  top: 14px;
+  left: 14px;
+
+  z-index: 3;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
   background: #44A1A3;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 6px;
+
+  color: white;
+
   font-size: 12px;
-  font-weight: 500;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  z-index: 2;
+  font-weight: 600;
+
+  box-shadow:
+    0 8px 20px rgba(68, 161, 163, .25);
 }
 
+/* ==========================
+   CONTENT
+========================== */
+
 .test-content {
-  padding: 10px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
 }
+
+/* ==========================
+   CATEGORY
+========================== */
 
 .test-category {
   margin: 0 0 10px;
-  color: #666;
-  font-size: 14px;
-  font-weight: 500;
+
+  color: #44A1A3;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
   text-transform: uppercase;
-  letter-spacing: 1px;
+
+  letter-spacing: 1.5px;
 }
 
+/* ==========================
+   TITLE
+========================== */
+
 .test-title {
-  margin: 0 0 10px;
-  font-size: 15px;
-  line-height: 1;
-  letter-spacing: 0;
+  margin: 0 0 18px;
+
+  font-size: 18px;
+
+  line-height: 1.5;
+
   font-weight: 600;
-  color: #1f2937;
-  min-height: 62px;   /* Consistent height */
+
+  color: #0f172a;
+
+  min-height: 56px;
 }
+
+/* ==========================
+   PRICE
+========================== */
 
 .price-wrapper {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
 }
 
 .old-price {
-  color: #9ca3af;
-  font-size: 14px;
+  color: #94a3b8;
+
+  font-size: 15px;
+
   text-decoration: line-through;
 }
 
 .new-price {
   color: #ea580c;
-  font-size: 16px;
-  font-weight: 700;
-}
 
-.book-btn {
-  width: 100%;
-  height: 38px;
-  background: #44A1A3;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 17px;
+  font-size: 24px;
+
   font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: #44A1A3;
-    transform: translateY(-1px);
-  }
 }
+
+/* ==========================
+   BUTTON
+========================== */
+
+.primary-btn {
+  margin-top: auto;
+
+  width: 100%;
+
+  height: 48px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  background: #44A1A3;
+
+  box-shadow:
+    0 12px 24px rgba(68, 161, 163, .20);
+
+  transition: all .3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 18px 30px rgba(68, 161, 163, .30);
+}
+
+/* ==========================
+   LARGE TABLET
+========================== */
 
 @media (max-width: 1200px) {
+
   .test-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
+
 }
 
-/* Tablet & Mobile - Show 2 Cards */
+/* ==========================
+   TABLET
+========================== */
+
 @media (max-width: 992px) {
+
   .test-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .test-image {
-    height: 240px;
-  }
-}
 
-/* Small Mobile */
-@media (max-width: 576px) {
-  .test-grid {
-    grid-template-columns: repeat(1, 1fr);   /* 2 Cards in Mobile */
-    gap: 16px;
-  }
   .test-image {
     height: 220px;
   }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 576px) {
+
+  .test-category-section {
+    padding: 10px 0;
+  }
+
   .section-title {
     font-size: 24px;
   }
-  .test-image {
-  position: relative;
-  height: 280px;
-  width: 100%;
-  overflow: hidden;
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    transition: transform 0.5s ease;
-  }}
+  .test-grid {
+    display: flex;
+
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
+
+    gap: 14px;
+
+    padding: 0 12px 10px;
+
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .test-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .test-card {
+    flex: 0 0 78%;
+    min-width: 78%;
+  }
+
+  .test-image {
+    height: 180px;
+  }
+
+  .discount-badge {
+    font-size: 10px;
+
+    padding: 6px 10px;
+  }
+
+  .test-content {
+    padding: 14px;
+  }
+
+  .test-category {
+    font-size: 10px;
+  }
+
+  .test-title {
+    font-size: 14px;
+
+    min-height: auto;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+  }
+
+  .old-price {
+    font-size: 12px;
+  }
+
+  .new-price {
+    font-size: 18px;
+  }
+
+  .primary-btn {
+    height: 40px;
+
+    font-size: 13px;
+  }
+
 }

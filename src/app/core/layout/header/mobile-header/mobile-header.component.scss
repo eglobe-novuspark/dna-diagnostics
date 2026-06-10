@@ -1,131 +1,110 @@
-// .mobile-header {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   z-index: 1000;
-
-//   background: #ffffff;
-//   border-bottom: 1px solid #eee;
-//   padding-top: 12px;
-// }
-
-// .mobile-top {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   gap: 12px;
-// }
-
-// .menu-btn,
-// .cart-btn {
-//   border: none;
-//   background: transparent;
-//   font-size: 24px;
-//   cursor: pointer;
-//   padding: 0;
-// }
-
-// .mobile-logo {
-//   flex: 1;
-//   display: flex;
-//   justify-content: center;
-
-//   img {
-//     width: 130px;
-//     height: 40px;
-//   }
-// }
-
-// .mobile-search {
-//   padding: 14px 0 16px;
-// }
-
-// ::ng-deep .mobile-search .search-bar input {
-//   width: 100%;
-//   height: 46px;
-//   border-radius: 30px;
-//   border: 1px solid #ddd;
-//   background: #f5f5f5;
-//   padding: 0 16px;
-//   font-size: 14px;
-// }
-
-// @media (min-width: 992px) {
-//   .mobile-header {
-//     display: none;
-//   }
-// }
 /* =========================
-   TOP SEARCH HEADER
+   ANNOUNCEMENT BAR
+========================= */
+
+.announcement-bar {
+
+  height: 34px;
+
+  background: #0f172a;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+  font-weight: 500;
+
+    position: relative;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 9999;
+}
+
+/* =========================
+   TOP CATEGORIES
+========================= */
+
+.top-categories {
+
+    position: relative;
+
+  left: 0;
+
+  width: 100%;
+
+  
+    background: linear-gradient(
+  180deg,
+  #ffffff 0%,
+  rgba(68, 161, 163, 0.08) 40%,
+  rgba(68, 161, 163, 0.18) 100%
+);
+
+
+  padding: 10px 12px;
+
+  display: flex;
+  gap: 10px;
+
+  overflow-x: auto;
+
+  z-index: 9998;
+
+  border-bottom: 1px solid #eee;
+
+  scrollbar-width: none;
+}
+
+.top-categories::-webkit-scrollbar {
+  display: none;
+}
+
+.category-chip {
+
+  white-space: nowrap;
+
+  background: #f3f4f6;
+
+  border-radius: 30px;
+
+  padding: 8px 14px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #111827;
+
+  flex-shrink: 0;
+}
+
+/* =========================
+   SEARCH HEADER
 ========================= */
 
 .mobile-top-search {
-  position: fixed;
+
+  position: sticky;
+
   top: 0;
-  left: 0;
+
   width: 100%;
-  z-index: 9999;
-
-  padding: 12px 14px;
-
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-
-  box-shadow: 0 8px 24px rgba(0,0,0,.08);
-}
-
-.search-wrapper {
-  width: 100%;
-}
-
-::ng-deep .search-box .search-bar {
-  position: relative;
-}
-
-::ng-deep .search-box .search-bar input {
-
-  width: 100% !important;
-  height: 52px;
 
   background: rgba(255,255,255,0.25);
 
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(12px);
 
-  border: 1px solid rgba(255,255,255,.4);
+  padding: 10px 12px;
 
-  border-radius: 18px;
+  z-index: 9997;
 
-  padding: 0 18px 0 48px;
-
-  font-size: 15px;
-  font-weight: 500;
-
-  color: #1f2937;
-
-  box-shadow:
-    0 8px 20px rgba(0,0,0,.08),
-    inset 0 1px 0 rgba(255,255,255,.4);
-
-  transition: all .3s ease;
-}
-
-::ng-deep .search-box .search-bar input::placeholder {
-  color: #6b7280;
-}
-
-::ng-deep .search-box .search-bar input:focus {
-  outline: none;
-
-  border-color: rgba(34,197,94,.5);
-
-  box-shadow:
-    0 10px 30px rgba(34,197,94,.15),
-    inset 0 1px 0 rgba(255,255,255,.5);
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .search-wrapper {
@@ -133,27 +112,34 @@
   display: flex;
   align-items: center;
 
-  gap: 12px;
-
-  width: 100%;
+  gap: 10px;
 }
+.mobile-top-search.glass-active::before {
+  content: '';
 
-.search-box {
+  position: absolute;
+  inset: 0;
 
-  flex: 1;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(68,161,163,.08),
+      rgba(255,255,255,.02)
+    );
 
-  width: 100%;
+  pointer-events: none;
 }
 
 .menu-btn {
 
-  width: 42px;
-  height: 42px;
+  width: 46px;
+  height: 46px;
 
   border: none;
-  border-radius: 12px;
 
-  background: #f5f7fb;
+  border-radius: 14px;
+
+  background: #f3f4f6;
 
   font-size: 22px;
 
@@ -166,27 +152,88 @@
   flex: 1;
 }
 
-/* SEARCH STYLE */
+/* SEARCH INPUT */
+
+::ng-deep .search-box .search-bar {
+
+  position: relative;
+
+  width: 100%;
+
+  max-width: 100%;
+}
+
+/* SEARCH ICON */
+
+::ng-deep .search-box .search-icon {
+
+  position: absolute;
+
+  left: 14px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 13px;
+
+  color: #6b7280;
+
+  z-index: 5;
+}
+
+/* MOBILE SEARCH INPUT */
 
 ::ng-deep .search-box .search-bar input {
 
   width: 100% !important;
 
-  display: block;
+  height: 42px;
 
-  height: 44px;
+  background: #f3f4f6;
 
-  border-radius: 30px;
+  border: 1px solid #e5e7eb;
 
-  border: 1px solid #ddd;
+  border-radius: 12px;
 
-  background: #f5f5f5;
+  padding: 0 14px 0 38px;
 
-  padding: 0 16px;
+  font-size: 13px;
 
-  font-size: 14px;
+  color: #111827;
 
   box-sizing: border-box;
+
+  transition: .3s ease;
+}
+
+/* FOCUS */
+
+::ng-deep .search-box .search-bar input:focus {
+
+  outline: none;
+
+  border-color: #44A1A3;
+
+  background: white;
+
+  box-shadow:
+    0 0 0 3px rgba(68,161,163,.10);
+}
+
+/* =========================
+   SEARCH DROPDOWN
+========================= */
+
+::ng-deep .search-dropdown {
+
+  margin-top: 10px;
+
+  border-radius: 16px !important;
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,.12) !important;
+
+  border: 1px solid #f1f5f9;
 }
 
 /* =========================
@@ -203,11 +250,10 @@
   transform: translateX(-50%);
 
   width: calc(100% - 20px);
-  max-width: 520px;
 
   height: 78px;
 
-  background: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.96);
 
   backdrop-filter: blur(20px);
 
@@ -247,8 +293,6 @@
   min-width: 60px;
 
   cursor: pointer;
-
-  transition: .3s ease;
 }
 
 .icon {
@@ -287,23 +331,15 @@
   object-fit: contain;
 }
 
-/* HOVER */
-
-.nav-item:hover {
-  transform: translateY(-3px);
-}
-
-.center-logo:hover {
-  transform: translateY(-4px);
-}
-
 /* DESKTOP HIDE */
 
 @media (min-width: 992px) {
 
+  .announcement-bar,
+  .top-categories,
   .mobile-top-search,
   .mobile-bottom-nav {
+
     display: none;
   }
-
 }

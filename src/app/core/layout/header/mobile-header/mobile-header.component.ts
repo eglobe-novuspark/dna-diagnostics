@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
     SearchBarComponent,
     MobileSidebarComponent,
     FloatingChatComponent,
-    RouterLink
+    RouterLink,
   ],
   templateUrl: './mobile-header.component.html',
   styleUrl: './mobile-header.component.scss'

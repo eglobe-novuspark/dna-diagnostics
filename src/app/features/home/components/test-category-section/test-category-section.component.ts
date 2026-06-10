@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TESTS_MOCK } from '../../data/tests.mock';
 
@@ -13,7 +13,7 @@ import { TESTS_MOCK } from '../../data/tests.mock';
   templateUrl: './test-category-section.component.html',
   styleUrl: './test-category-section.component.scss'
 })
-export class TestCategorySectionComponent {
+export class TestCategorySectionComponent implements OnInit{
 
   testCategoryItems = TESTS_MOCK.slice(0, 4).map((test, index) => ({
     ...test,
@@ -41,6 +41,9 @@ export class TestCategorySectionComponent {
       default:
         return 'DNA TEST';
     }
+  }
+  ngOnInit(): void {
+    
   }
 
 }

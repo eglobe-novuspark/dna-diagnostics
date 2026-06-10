@@ -5,43 +5,181 @@
     *ngIf="blog"
   >
 
+    <!-- BREADCRUMB -->
+    <div class="blog-breadcrumb">
+
+      <p>
+        Home / Blog / Article
+      </p>
+
+    </div>
+
+    <!-- LAYOUT -->
     <div class="blog-details-layout">
 
       <!-- LEFT -->
       <div class="blog-content">
 
-        <img [src]="blog.image">
+        <!-- IMAGE -->
+        <div class="blog-main-image">
 
+          <img
+            [src]="blog.image"
+            [alt]="blog.title"
+          >
+
+          <div class="blog-date">
+            {{ blog.date }}
+          </div>
+
+        </div>
+
+        <!-- TITLE -->
         <h1>
           {{ blog.title }}
         </h1>
 
-        <span>
-          {{ blog.date }}
-        </span>
+        <!-- META -->
+        <div class="blog-meta">
 
-        <p>
-          {{ blog.fullDescription }}
-        </p>
+          <span class="meta-chip">
+            DNA Labs India
+          </span>
+
+          <span class="meta-chip">
+            Genetic Testing
+          </span>
+
+          <span class="meta-chip">
+            Healthcare
+          </span>
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="blog-description">
+
+          <p>
+            {{ blog.fullDescription }}
+          </p>
+
+        </div>
+
+        <!-- HIGHLIGHTS -->
+        <div class="highlight-box">
+
+          <h3>
+            Key Highlights
+          </h3>
+
+          <ul>
+
+            <li>
+              Advanced genomic and pathology testing services
+            </li>
+
+            <li>
+              Accurate laboratory reports with modern technology
+            </li>
+
+            <li>
+              Trusted by patients and healthcare professionals
+            </li>
+
+            <li>
+              Secure and confidential testing process
+            </li>
+
+          </ul>
+
+        </div>
 
       </div>
 
       <!-- RIGHT -->
       <div class="blog-sidebar">
 
-        <img
-          class="author-image"
-          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop"
-        >
+        <!-- AUTHOR -->
+        <div class="author-card">
 
-        <h3>
-          DNA Labs India
-        </h3>
+          <div class="author-image-wrap">
 
-        <p>
-          DNA Labs India provides advanced genetic
-          diagnostics with modern laboratory technology.
-        </p>
+            <img
+              class="author-image"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop"
+            >
+
+          </div>
+
+          <h3>
+            DNA Labs India
+          </h3>
+
+          <p>
+            DNA Labs India provides advanced genetic diagnostics,
+            molecular testing and trusted healthcare solutions
+            with modern laboratory technology.
+          </p>
+
+        </div>
+
+        <!-- RECENT -->
+        <div class="side-box">
+
+          <h4>
+            Recent Articles
+          </h4>
+
+          <ul>
+
+            <li>
+              Understanding Genetic Testing
+            </li>
+
+            <li>
+              Benefits of DNA Screening
+            </li>
+
+            <li>
+              Modern Pathology Solutions
+            </li>
+
+            <li>
+              Why Accurate Reports Matter
+            </li>
+
+          </ul>
+
+        </div>
+
+        <!-- SHARE -->
+        <div class="side-box">
+
+          <h4>
+            Share Article
+          </h4>
+
+          <div class="share-box">
+
+            <div class="share-btn">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+
+            <div class="share-btn">
+              <i class="fab fa-instagram"></i>
+            </div>
+
+            <div class="share-btn">
+              <i class="fab fa-twitter"></i>
+            </div>
+
+            <div class="share-btn">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 

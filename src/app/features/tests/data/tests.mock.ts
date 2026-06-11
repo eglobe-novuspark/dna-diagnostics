@@ -23,11 +23,12 @@ const REAL_TESTS: Test[] = [
     discount: 35,
 
     image:
-      'assets/tests/dna-test/paternity-dna-test.png',
+      'assets/tests/dna-test/paternity-dna-test2.png',
 
     images: [
       'assets/tests/dna-test/paternity-dna-test.png',
-      'assets/tests/dna-test/paternity-dna-test1.png'
+      'assets/tests/dna-test/paternity-dna-test1.png',
+      'assets/tests/dna-test/paternity-dna-test2.png'
     ],
 
     doctor: 'IVF CLINIC',
@@ -148,9 +149,9 @@ const REAL_TESTS: Test[] = [
     price: 26000,
     oldPrice: 32000,
     discount: 19,
-    image: 'assets/tests/legal-paternity.png',
+    image: 'assets/tests/dna-test/legal-paternity-dna-test.png',
     images: [
-      'assets/tests/legal-paternity.png'
+      'assets/tests/dna-test/legal-paternity-dna-test.png'
     ],
     doctor: 'GENETICIST',
     reportsTime: '7 Days',
@@ -193,9 +194,9 @@ const REAL_TESTS: Test[] = [
     price: 15000,
     oldPrice: 21000,
     discount: 29,
-    image: 'assets/tests/home-dna-kit.png',
+    image: 'assets/tests/dna-test/home-dna-test-kit.png',
     images: [
-      'assets/tests/home-dna-kit.png'
+      'assets/tests/dna-test/home-dna-test-kit.png'
     ],
     doctor: 'GENETICIST',
     reportsTime: '5 Days',
@@ -238,10 +239,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 25000,
   discount: 28,
 
-  image: 'assets/images/tests/maternity-dna-test.png',
+  image: 'assets/tests/dna-test/maternity-dna-test.png',
 
   images: [
-    'assets/images/tests/maternity-dna-test.png'
+    'aassets/tests/dna-test/maternity-dna-test.png'
   ],
 
   doctor: 'GENETICIST',

@@ -598,10 +598,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 18000,
   discount: 44,
 
-  image: 'assets/tests/dna-test/pregnancy-nipt-test.png',
+  image: 'assets/tests/nipt-test/pregnancy-nipt-test.png',
 
   images: [
-    'assets/tests/dna-test/pregnancy-nipt-test.png'
+    'assets/tests/nipt-test/pregnancy-nipt-test.png'
   ],
 
   doctor: 'GYNECOLOGIST',
@@ -662,10 +662,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 24000,
   discount: 33,
 
-  image: 'assets/tests/dna-test/nipt-23-chromosomes.png',
+  image: 'assets/tests/nipt-test/nipt-advanced-23-chromosomes.png',
 
   images: [
-    'assets/tests/dna-test/nipt-23-chromosomes.png'
+    'assets/tests/nipt-test/nipt-advanced-23-chromosomes.png'
   ],
 
   doctor: 'GYNECOLOGIST',
@@ -721,7 +721,7 @@ const REAL_TESTS: Test[] = [
   oldPrice: 30000,
   discount: 27,
 
-  image: 'assets/tests/dna-test/nipt-microdeletion-test.png',
+  image: 'assets/tests/nipt-test/nipt-microdeletion-test.png',
 
   images: [
     'assets/tests/dna-test/nipt-microdeletion-test.png'
@@ -780,7 +780,7 @@ const REAL_TESTS: Test[] = [
   oldPrice: 26000,
   discount: 31,
 
-  image: 'assets/tests/dna-test/nipt-twins-test.png',
+  image: 'assets/tests/nipt-test/nipt-twins-test.png',
 
   images: [
     'assets/tests/dna-test/nipt-twins-test.png'

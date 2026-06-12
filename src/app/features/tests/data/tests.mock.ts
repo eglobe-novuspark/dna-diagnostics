@@ -230,69 +230,69 @@ const REAL_TESTS: Test[] = [
       }
     ]
   },
-{
-  id: 4,
-  title: 'Maternity DNA Test',
-  slug: 'maternity-dna-test',
-  category: 'DNA TEST',
-  price: 18000,
-  oldPrice: 25000,
-  discount: 28,
+  {
+    id: 4,
+    title: 'Maternity DNA Test',
+    slug: 'maternity-dna-test',
+    category: 'DNA TEST',
+    price: 18000,
+    oldPrice: 25000,
+    discount: 28,
 
-  image: 'assets/tests/dna-test/maternity-dna-test.png',
+    image: 'assets/tests/dna-test/maternity-dna-test.png',
 
-  images: [
-    'aassets/tests/dna-test/maternity-dna-test.png'
-  ],
+    images: [
+      'assets/tests/dna-test/maternity-dna-test.png'
+    ],
 
-  doctor: 'GENETICIST',
+    doctor: 'GENETICIST',
 
-  reportsTime: '5 Days',
+    reportsTime: '5 Days',
 
-  description:
-    'Maternity DNA testing confirms the biological relationship between a child and the alleged mother with extremely high accuracy.',
+    description:
+      'Maternity DNA testing confirms the biological relationship between a child and the alleged mother with extremely high accuracy.',
 
-  descriptionContent: [
-    {
-      title: 'Maternity DNA Test Cost in India'
-    },
-    {
-      heading: 'What Is a Maternity DNA Test?',
-      content:
-        'A maternity DNA test compares DNA markers between a child and an alleged mother to establish a biological relationship.'
-    },
-    {
-      heading: 'Key Benefits',
-      bullets: [
-        '99.9999% Accuracy',
-        'Confidential Testing',
-        'Professional Sample Collection',
-        'Fast Turnaround Time'
-      ]
-    },
-    {
-      heading: 'Who Needs This Test?',
-      content:
-        'Useful in adoption cases, hospital mix-up concerns, immigration cases and family relationship verification.'
-    }
-  ],
+    descriptionContent: [
+      {
+        title: 'Maternity DNA Test Cost in India'
+      },
+      {
+        heading: 'What Is a Maternity DNA Test?',
+        content:
+          'A maternity DNA test compares DNA markers between a child and an alleged mother to establish a biological relationship.'
+      },
+      {
+        heading: 'Key Benefits',
+        bullets: [
+          '99.9999% Accuracy',
+          'Confidential Testing',
+          'Professional Sample Collection',
+          'Fast Turnaround Time'
+        ]
+      },
+      {
+        heading: 'Who Needs This Test?',
+        content:
+          'Useful in adoption cases, hospital mix-up concerns, immigration cases and family relationship verification.'
+      }
+    ],
 
-  descriptionSections: [
-    {
-      heading: 'Highly Accurate Analysis',
-      content:
-        'Advanced forensic DNA analysis provides reliable maternity confirmation.'
-    }
-  ],
+    descriptionSections: [
+      {
+        heading: 'Highly Accurate Analysis',
+        content:
+          'Advanced forensic DNA analysis provides reliable maternity confirmation.'
+      }
+    ],
 
-  serviceDetails: [
-    {
-      service: 'Lab Collection',
-      validity: 'Personal Use',
-      price: '₹18,000'
-    }
-  ]
-},
+    serviceDetails: [
+      {
+        service: 'Lab Collection',
+        validity: 'Personal Use',
+        price: '₹18,000'
+      }
+    ]
+  },
 
 {
   id: 5,
@@ -303,10 +303,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 22000,
   discount: 27,
 
-  image: 'assets/images/tests/sibling-dna-test.png',
+  image: 'assets/tests/dna-test/sibling-dna-test.png',
 
   images: [
-    'assets/images/tests/sibling-dna-test.png'
+    'assets/tests/dna-test/sibling-dna-test.png'
   ],
 
   doctor: 'GENETICIST',
@@ -362,10 +362,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 20000,
   discount: 30,
 
-  image: 'assets/images/tests/twin-zygosity-dna-test.png',
+  image: 'assets/tests/dna-test/twin-zygosity-dna-test.png',
 
   images: [
-    'assets/images/tests/twin-zygosity-dna-test.png'
+    'assets/tests/dna-test/twin-zygosity-dna-test.png'
   ],
 
   doctor: 'GENETICIST',
@@ -421,10 +421,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 26000,
   discount: 31,
 
-  image: 'assets/images/tests/grandparent-dna-test.png',
+  image: 'assets/tests/dna-test/grandparent-dna-test.png',
 
   images: [
-    'assets/images/tests/grandparent-dna-test.png'
+    'assets/tests/dna-test/grandparent-dna-test.png'
   ],
 
   doctor: 'GENETICIST',
@@ -480,10 +480,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 24000,
   discount: 29,
 
-  image: 'assets/images/tests/y-chromosome-dna-test.png',
+  image: 'assets/tests/dna-test/y-chromosome-dna-test.png',
 
   images: [
-    'assets/images/tests/y-chromosome-dna-test.png'
+    'assets/tests/dna-test/y-chromosome-dna-test.png'
   ],
 
   doctor: 'GENETICIST',
@@ -539,10 +539,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 27000,
   discount: 30,
 
-  image: 'assets/images/tests/avuncular-dna-test.png',
+  image: 'assets/tests/dna-test/avuncular-dna-test.png',
 
   images: [
-    'assets/images/tests/avuncular-dna-test.png'
+    'assets/tests/dna-test/avuncular-dna-test.png'
   ],
 
   doctor: 'GENETICIST',
@@ -588,6 +588,7 @@ const REAL_TESTS: Test[] = [
     }
   ]
 },
+
 {
   id: 10,
   title: 'Pregnancy NIPT Test',
@@ -597,10 +598,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 18000,
   discount: 44,
 
-  image: 'assets/images/tests/pregnancy-nipt-test.png',
+  image: 'assets/tests/dna-test/pregnancy-nipt-test.png',
 
   images: [
-    'assets/images/tests/pregnancy-nipt-test.png'
+    'assets/tests/dna-test/pregnancy-nipt-test.png'
   ],
 
   doctor: 'GYNECOLOGIST',
@@ -661,10 +662,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 24000,
   discount: 33,
 
-  image: 'assets/images/tests/nipt-23-chromosomes.png',
+  image: 'assets/tests/dna-test/nipt-23-chromosomes.png',
 
   images: [
-    'assets/images/tests/nipt-23-chromosomes.png'
+    'assets/tests/dna-test/nipt-23-chromosomes.png'
   ],
 
   doctor: 'GYNECOLOGIST',
@@ -720,10 +721,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 30000,
   discount: 27,
 
-  image: 'assets/images/tests/nipt-microdeletion-test.png',
+  image: 'assets/tests/dna-test/nipt-microdeletion-test.png',
 
   images: [
-    'assets/images/tests/nipt-microdeletion-test.png'
+    'assets/tests/dna-test/nipt-microdeletion-test.png'
   ],
 
   doctor: 'GYNECOLOGIST',
@@ -779,10 +780,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 26000,
   discount: 31,
 
-  image: 'assets/images/tests/nipt-twins-test.png',
+  image: 'assets/tests/dna-test/nipt-twins-test.png',
 
   images: [
-    'assets/images/tests/nipt-twins-test.png'
+    'assets/tests/dna-test/nipt-twins-test.png'
   ],
 
   doctor: 'GYNECOLOGIST',
@@ -838,10 +839,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 22000,
   discount: 32,
 
-  image: 'assets/images/tests/nipt-gender-screening-test.png',
+  image: 'assets/tests/dna-test/nipt-gender-screening-test.png',
 
   images: [
-    'assets/images/tests/nipt-gender-screening-test.png'
+    'assets/tests/dna-test/nipt-gender-screening-test.png'
   ],
 
   doctor: 'GYNECOLOGIST',
@@ -896,10 +897,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 4000,
   discount: 38,
 
-  image: 'assets/images/tests/genetic-counselling.png',
+  image: 'assets/tests/dna-test/genetic-counselling.png',
 
   images: [
-    'assets/images/tests/genetic-counselling.png'
+    'assets/tests/dna-test/genetic-counselling.png'
   ],
 
   doctor: 'GENETICIST',
@@ -955,10 +956,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 14000,
   discount: 36,
 
-  image: 'assets/images/tests/carrier-screening-test.png',
+  image: 'assets/tests/dna-test/carrier-screening-test.png',
 
   images: [
-    'assets/images/tests/carrier-screening-test.png'
+    'assets/tests/dna-test/carrier-screening-test.png'
   ],
 
   doctor: 'GENETICIST',
@@ -1014,10 +1015,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 13000,
   discount: 35,
 
-  image: 'assets/images/tests/fragile-x-syndrome-test.png',
+  image: 'assets/tests/dna-test/fragile-x-syndrome-test.png',
 
   images: [
-    'assets/images/tests/fragile-x-syndrome-test.png'
+    'assets/tests/dna-test/fragile-x-syndrome-test.png'
   ],
 
   doctor: 'GENETICIST',
@@ -1073,10 +1074,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 20000,
   discount: 30,
 
-  image: 'assets/images/tests/sca-panel-test.png',
+  image: 'assets/tests/dna-test/sca-panel-test.png',
 
   images: [
-    'assets/images/tests/sca-panel-test.png'
+    'assets/tests/dna-test/sca-panel-test.png'
   ],
 
   doctor: 'GENETICIST',
@@ -1135,10 +1136,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 26000,
   discount: 31,
 
-  image: 'assets/images/tests/brca1-brca2-test.png',
+  image: 'assets/tests/dna-test/brca1-brca2-test.png',
 
   images: [
-    'assets/images/tests/brca1-brca2-test.png'
+    'assets/tests/dna-test/brca1-brca2-test.png'
   ],
 
   doctor: 'GENETICIST',
@@ -1193,10 +1194,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 6000,
   discount: 42,
 
-  image: 'assets/images/tests/rabies-antibody-test.png',
+  image: 'assets/tests/dna-test/rabies-antibody-test.png',
 
   images: [
-    'assets/images/tests/rabies-antibody-test.png'
+    'assets/tests/dna-test/rabies-antibody-test.png'
   ],
 
   doctor: 'GENERAL PHYSICIAN',
@@ -1262,10 +1263,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 2500,
   discount: 52,
 
-  image: 'assets/images/tests/hiv-4th-generation-test.png',
+  image: 'assets/tests/dna-test/hiv-4th-generation-test.png',
 
   images: [
-    'assets/images/tests/hiv-4th-generation-test.png'
+    'assets/tests/dna-test/hiv-4th-generation-test.png'
   ],
 
   doctor: 'GENERAL PHYSICIAN',
@@ -1330,10 +1331,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 7000,
   discount: 36,
 
-  image: 'assets/images/tests/hepatitis-b-viral-load-test.png',
+  image: 'assets/tests/dna-test/hepatitis-b-viral-load-test.png',
 
   images: [
-    'assets/images/tests/hepatitis-b-viral-load-test.png'
+    'assets/tests/dna-test/hepatitis-b-viral-load-test.png'
   ],
 
   doctor: 'GENERAL PHYSICIAN',
@@ -1397,10 +1398,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 8500,
   discount: 29,
 
-  image: 'assets/images/tests/food-intolerance-allergy-test.png',
+  image: 'assets/tests/dna-test/food-intolerance-allergy-test.png',
 
   images: [
-    'assets/images/tests/food-intolerance-allergy-test.png'
+    'assets/tests/dna-test/food-intolerance-allergy-test.png'
   ],
 
   doctor: 'DERMATOLOGIST',
@@ -1466,10 +1467,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 17000,
   discount: 29,
 
-  image: 'assets/images/tests/food-intolerance-complete-panel.png',
+  image: 'assets/tests/dna-test/food-intolerance-complete-panel.png',
 
   images: [
-    'assets/images/tests/food-intolerance-complete-panel.png'
+    'assets/tests/dna-test/food-intolerance-complete-panel.png'
   ],
 
   doctor: 'DERMATOLOGIST',
@@ -1534,10 +1535,10 @@ const REAL_TESTS: Test[] = [
   oldPrice: 11000,
   discount: 32,
 
-  image: 'assets/images/tests/medicine-drug-allergy-test.png',
+  image: 'assets/tests/dna-test/medicine-drug-allergy-test.png',
 
   images: [
-    'assets/images/tests/medicine-drug-allergy-test.png'
+    'assets/tests/dna-test/medicine-drug-allergy-test.png'
   ],
 
   doctor: 'DERMATOLOGIST',

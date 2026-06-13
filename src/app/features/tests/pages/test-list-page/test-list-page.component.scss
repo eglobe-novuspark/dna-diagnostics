@@ -1,22 +1,28 @@
-
-
 .content-wrapper {
   display: flex;
   gap: 28px;
   margin-top: 20px;
+  align-items: flex-start;
 }
 
-/* Sidebar - Fixed Width (Recommended) */
-app-test-filter-sidebar {
-  flex: 0 0 240px;           /* ← This is the key */
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.content-wrapper > app-test-filter-sidebar {
   width: 240px;
   min-width: 240px;
+  flex-shrink: 0;
 }
 
-/* Main Content Area */
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
 .main-content {
   flex: 1;
   min-width: 0;
+  width: 100%;
 }
 
 .page-title {
@@ -31,38 +37,206 @@ app-test-filter-sidebar {
   font-weight: 500;
 }
 
-/* Grid */
 app-test-grid {
   display: block;
+  width: 100%;
 }
 
-/* Pagination */
+/* ==========================================
+   PAGINATION
+========================================== */
+
 .pagination-wrapper {
-  margin: 40px 0;
+  margin: 24px 0;
   display: flex;
   justify-content: center;
 }
 
 ::ng-deep .ngx-pagination {
   padding: 0;
+
   li {
     margin: 0 4px;
   }
+
   .current {
     background: #44A1A3 !important;
-    border-color: #44A1A3;
+    border-color: #44A1A3 !important;
   }
 }
+
+/* ==========================================
+   MOBILE FILTER
+========================================== */
+
+.mobile-actions,
+.mobile-filter-overlay,
+.mobile-filter-drawer {
+  display: none;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
 @media (max-width: 991px) {
-  .content-wrapper {
-    display: block;
+
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
-  app-test-filter-sidebar {
+  .content-wrapper {
+    display: block;
+    margin-top: 12px;
+  }
+
+  /* Hide desktop sidebar */
+
+  .content-wrapper > app-test-filter-sidebar {
     display: none;
   }
 
   .main-content {
     width: 100%;
+  }
+
+  /* Filter Button */
+
+  .mobile-actions {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .action-btn {
+    width: 100%;
+    height: 48px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(
+      135deg,
+      #44A1A3,
+      #5cb7b9
+    );
+
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+  }
+
+  /* Drawer Overlay */
+
+  .mobile-filter-overlay {
+    display: block;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    z-index: 999;
+  }
+
+  /* Drawer */
+
+  .mobile-filter-drawer {
+    display: block;
+
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 85vh;
+
+    background: #fff;
+
+    border-radius: 24px 24px 0 0;
+
+    z-index: 10000;
+
+    overflow-y: auto;
+
+    transform: translateY(100%);
+    transition: transform .3s ease;
+  }
+
+  .mobile-filter-drawer.open {
+    transform: translateY(0);
+  }
+
+  .drawer-header {
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px 20px;
+
+    background: #fff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    z-index: 2;
+  }
+
+  .drawer-header h3 {
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #111827;
+  }
+
+  .close-btn {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #f3f4f6;
+
+    cursor: pointer;
+  }
+
+  /* Sidebar inside drawer */
+
+  .mobile-filter-drawer app-test-filter-sidebar {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-filter-drawer ::ng-deep .sidebar {
+    width: 100% !important;
+    min-width: 100% !important;
+
+    border-right: none !important;
+
+    padding: 20px !important;
+  }
+
+  /* Hide desktop pagination extras */
+
+  .mobile-filter-drawer ::ng-deep .page-size-selector,
+  ::ng-deep .page-size-selector {
+    display: none !important;
+  }
+
+  ::ng-deep .pagination-info {
+    display: none !important;
+  }
+
+  app-test-grid {
+    margin-top: 16px;
   }
 }

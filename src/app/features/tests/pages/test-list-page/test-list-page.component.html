@@ -1,11 +1,20 @@
 <div class="container">
-
-
   <div class="content-wrapper">
     <app-test-filter-sidebar
       (priceChanged)="onPriceFilter($event)">
     </app-test-filter-sidebar>
     <div class="main-content">
+        <div class="mobile-actions">
+
+      <button
+        class="action-btn"
+        (click)="openFilter()">
+
+        Filter
+
+      </button>
+
+    </div>
       <app-pagination
         [totalItems]="totalResults"
         [itemsPerPage]="itemsPerPage"
@@ -24,4 +33,37 @@
       
     </div>
   </div>
+</div>
+
+@if (isMobileFilterOpen) {
+
+<div
+  class="mobile-filter-overlay"
+  (click)="closeFilter()">
+</div>
+
+}
+
+<div
+  class="mobile-filter-drawer"
+  [class.open]="isMobileFilterOpen">
+
+  <div class="drawer-header">
+
+    <h3>Filter Tests</h3>
+
+    <button
+      class="close-btn"
+      (click)="closeFilter()">
+
+      ✕
+
+    </button>
+
+  </div>
+
+  <app-test-filter-sidebar
+    (priceChanged)="onPriceFilter($event)">
+  </app-test-filter-sidebar>
+
 </div>

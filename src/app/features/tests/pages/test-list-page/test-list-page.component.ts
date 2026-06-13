@@ -26,6 +26,8 @@ export class TestListPageComponent implements OnInit {
   currentPage = 1;
   itemsPerPage = 12;               // set to 2 so we have 2 pages with 4 items
   filteredTests: Test[] = [];
+  isFilterApplied = false;
+  isMobileFilterOpen = false;
 
   constructor(private testService: TestService) {}
 
@@ -43,17 +45,17 @@ export class TestListPageComponent implements OnInit {
 }
 
   // Derived properties
-  get totalResults(): number {
-    return this.filteredTests.length > 0
-      ? this.filteredTests.length
-      : this.allTests.length;
-  }
+get totalResults(): number {
+  return this.isFilterApplied
+    ? this.filteredTests.length
+    : this.allTests.length;
+}
 
-  get pagedTests(): Test[] {
-  const data =
-    this.filteredTests.length > 0
-      ? this.filteredTests
-      : this.allTests;
+get pagedTests(): Test[] {
+
+  const data = this.isFilterApplied
+    ? this.filteredTests
+    : this.allTests;
 
   const start = (this.currentPage - 1) * this.itemsPerPage;
 
@@ -84,11 +86,17 @@ export class TestListPageComponent implements OnInit {
       test.price >= filter.min &&
       test.price <= filter.max
     );
-
+    this.isFilterApplied = true;
     this.currentPage = 1;
+      this.isMobileFilterOpen = false;
 
-    console.log('Filter:', filter);
-    console.log('Found:', this.filteredTests.length);
+
   }
-  
+  openFilter() {
+    this.isMobileFilterOpen = true;
+  }
+  closeFilter() {
+  this.isMobileFilterOpen = false;
+}
+    
 }
